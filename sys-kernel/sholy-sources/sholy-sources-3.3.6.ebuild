@@ -10,4 +10,4 @@ detect_version
 DESCRIPTION="Just vanella-sources without updates"
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="amd64 x86"
