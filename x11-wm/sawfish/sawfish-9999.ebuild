@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	emacs? ( !app-emacs/sawfish )
 	>=dev-libs/librep-9999
 	>=x11-libs/rep-gtk-9999
-	>=dev-util/pkgconfig-0.22"
+	>=dev-util/pkgconfig-0.22
+    >=x11-libs/libXinerama-1.1.1"
 
 src_unpack() {
 	git-2_src_unpack
