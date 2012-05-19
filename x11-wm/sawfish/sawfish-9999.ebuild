@@ -14,7 +14,8 @@ IUSE="debug emacs gnome kde nls pango"
 
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawfish.wikia.com"
-EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/sawfish/main.git"
+EGIT_REPO_URI="git://github.com/Sholy/Sawfish.git"
+#git://git.tuxfamily.org/gitroot/sawfish/main.git"
 
 SLOT="0"
 LICENSE="GPL-2 Artistic-2"
