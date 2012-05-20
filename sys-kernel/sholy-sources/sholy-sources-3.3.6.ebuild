@@ -7,7 +7,7 @@ K_DEBLOB_AVAILABLE="0"
 ETYPE="sources"
 inherit kernel-2
 detect_version
-DESCRIPTION="Just vanella-sources without updates"
+DESCRIPTION="LTS Kernel, I randomly desired to support this one, I will update it when I want to."
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
 KEYWORDS="amd64 x86"
