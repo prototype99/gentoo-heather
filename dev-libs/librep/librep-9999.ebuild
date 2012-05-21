@@ -10,7 +10,7 @@ inherit git-2 autotools eutils libtool toolchain-funcs multilib elisp-common
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 HOMEPAGE="http://git.tuxfamily.org/librep/main.git"
-EGIT_REPO_URI="git://github.com/Sholy/rep.git"
+EGIT_REPO_URI="git://github.com/Nengraphy/rep.git"
 #git://git.tuxfamily.org/gitroot/librep/main.git"
 
 LICENSE="GPL-2"
