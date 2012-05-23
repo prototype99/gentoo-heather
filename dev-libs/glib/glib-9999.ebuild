@@ -124,7 +124,8 @@ src_prepare() {
 	fi
 
 	# gdbus-codegen is a separate package
-	epatch "${FILESDIR}/${PN}-2.31.x-external-gdbus-codegen.patch"
+	#epatch "${FILESDIR}/${PN}-2.31.x-external-gdbus-codegen.patch"
+	#LET'S SEE WITHOUT PATCH
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files
