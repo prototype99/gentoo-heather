@@ -15,7 +15,3 @@ IUSE=""
 
 DEPEND="dev-util/kdevelop"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-		git_src_unpack
-}
