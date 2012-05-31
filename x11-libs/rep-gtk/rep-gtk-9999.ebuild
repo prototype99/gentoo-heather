@@ -10,8 +10,7 @@ inherit git-2 autotools eutils toolchain-funcs multilib
 
 DESCRIPTION="A GTK+ language binding for the librep Lisp environment"
 HOMEPAGE="http://git.tuxfamily.org/?p=gitroot/librep/gtk.git;a=summary"
-EGIT_REPO_URI="git://github.com/Nengraphy/rep-gtk.git"
-#git://git.tuxfamily.org/gitroot/librep/gtk.git"
+EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/librep/gtk.git"
 
 LICENSE="GPL-2"
 SLOT="gtk-2.0"
