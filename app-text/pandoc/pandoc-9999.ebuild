@@ -11,7 +11,7 @@ DESCRIPTION="Conversion between markup formats"
 HOMEPAGE="http://johnmacfarlane.net/pandoc"
 EGIT_REPO_URI="git://github.com/jgm/pandoc.git"
 EGIT_HAS_SUBMODULES="true"
-EGIT_OPTIONS="--recursive"
+#EGIT_OPTIONS="--recursive"
 
 LICENSE="GPL-2"
 SLOT="0"
