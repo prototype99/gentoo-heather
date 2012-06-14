@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">app-text/pandoc-1.9.3[profile?]
+RDEPEND=">=app-text/pandoc-1.9.3[profile?]
 		=dev-haskell/binary-0.5*[profile?]
 		=dev-haskell/blaze-html-0.5*[profile?]
 		>=dev-haskell/blaze-markup-0.5.1[profile?]
