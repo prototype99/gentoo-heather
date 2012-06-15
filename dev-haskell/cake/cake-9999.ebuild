@@ -19,6 +19,7 @@ RDEPEND="dev-haskell/binary[profile?]
 		>=dev-haskell/hashable-1.1.2.3[profile?] <dev-haskell/hashable-1.2[profile?]
 		dev-haskell/random[profile?]
 		dev-haskell/time[profile?]
+        dev-haskell/glob[profile?]
 		>=dev-haskell/transformers-0.2[profile?] <dev-haskell/transformers-0.4[profile?]
 		>=dev-haskell/unordered-containers-0.2.1[profile?] <dev-haskell/unordered-containers-0.3[profile?]
 		>=dev-lang/ghc-6.10.1"
