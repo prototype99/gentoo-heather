@@ -12,6 +12,7 @@ EGIT_REPO_URI="git://68.150.160.199:9418/var/git/openoctave.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="*"
+IUSE=""
 
 RDEPEND="
 	>=media-libs/ladspa-sdk-1.0

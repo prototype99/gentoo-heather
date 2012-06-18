@@ -11,3 +11,4 @@ DESCRIPTION="LTS Kernel, I randomly desired to support this one, I will update i
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
 KEYWORDS="amd64 x86"
+IUSE=""

@@ -8,6 +8,7 @@ HOMEPAGE="http://nengraphy.com"
 LICENSE="GPL3"
 SLOT="0"
 KEYWORDS="amd64 x86"
+IUSE=""
 
 DEPEND="dev-db/sqlite"
 RDEPEND="${DEPEND}"

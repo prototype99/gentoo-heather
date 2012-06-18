@@ -9,6 +9,7 @@ HOMEPAGE="http://will.iki.fi/software/ocs/"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND="dev-lang/ocaml[ocamlopt]"
 RDEPEND="${DEPEND}"
