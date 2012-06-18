@@ -14,8 +14,8 @@ EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/sawfishpager/pager.git"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
-
+KEYWORDS=""
+IUSE=""
 
 DEPEND=">=x11-wm/sawfish-1.6.1"
 
