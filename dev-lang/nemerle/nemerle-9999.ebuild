@@ -15,8 +15,6 @@ IUSE=""
 DEPEND="dev-lang/mono"
 RDEPEND="${DEPEND}"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_compile() {
     elog "Nemerle sources compiling : "
     xbuild NemerleAll-Mono.nproj /t:Stage4 /p:Configuration=Release
