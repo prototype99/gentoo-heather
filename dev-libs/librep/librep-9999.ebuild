@@ -6,7 +6,7 @@ EAPI="2"
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
 
-inherit git-2 autotools eutils libtool toolchain-funcs multilib elisp-common
+inherit git-2 autotools eutils toolchain-funcs multilib elisp-common
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 HOMEPAGE="http://git.tuxfamily.org/librep/main.git"
