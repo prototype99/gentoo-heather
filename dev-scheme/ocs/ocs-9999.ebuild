@@ -3,7 +3,7 @@ EAPI=2
 inherit git-2
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
-EGIT_REPO_URI="git://github.com/Bridgit/ocs.git"
+EGIT_REPO_URI="git://github.com/Nensha/ocs.git"
 HOMEPAGE="http://will.iki.fi/software/ocs/"
 
 LICENSE="BSD"

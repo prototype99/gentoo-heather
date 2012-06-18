@@ -5,8 +5,7 @@ inherit haskell-cabal git-2
 
 DESCRIPTION="Build system library, like Make, but more accurate dependencies."
 HOMEPAGE="http://community.haskell.org/~ndm/shake/"
-#SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
-EGIT_REPO_URI="git://github.com/Bridgit/cake.git"
+EGIT_REPO_URI="git://github.com/Nensha/cake.git"
 
 LICENSE="BSD"
 SLOT="0"
