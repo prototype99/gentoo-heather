@@ -4,12 +4,11 @@
 
 EAPI=2
 
-
 DESCRIPTION="Leiningen is a build utility for clojure projects."
 HOMEPAGE="http://github.com/technomancy/leiningen/"
 SRC_URI="http://github.com/technomancy/leiningen/raw/stable/bin/lein"
 
-LICENSE=""
+LICENSE="EPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
