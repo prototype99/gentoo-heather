@@ -1,5 +1,5 @@
-inherit git-2
 EAPI=2
+inherit git-2
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
 EGIT_REPO_URI="https://github.com/spurious/chibi-scheme-mirror.git"
