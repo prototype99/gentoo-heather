@@ -4,8 +4,6 @@
 
 EAPI=3
 
-inherit autotools
-
 DESCRIPTION="Nautilus Terminal is a terminal embedded in Nautilus"
 HOMEPAGE="http://projects.flogisoft.com/nautilus-terminal/"
 SRC_URI="http://projects.flogisoft.com/nautilus-terminal/download/${PN}_${PV}_src.tar.gz"
