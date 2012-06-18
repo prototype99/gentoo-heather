@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/librep/gtk.git"
 
 LICENSE="GPL-2"
 SLOT="gtk-2.0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-libs/librep-9999

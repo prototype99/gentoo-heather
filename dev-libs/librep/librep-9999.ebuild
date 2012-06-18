@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/librep/main.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS=""
 IUSE="emacs gmp libffi readline"
 
 RDEPEND=">=sys-libs/gdbm-1.8.3

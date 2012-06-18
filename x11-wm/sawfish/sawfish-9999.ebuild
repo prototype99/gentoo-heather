@@ -18,7 +18,7 @@ EGIT_REPO_URI="git://git.tuxfamily.org/gitroot/sawfish/main.git"
 
 SLOT="0"
 LICENSE="GPL-2 Artistic-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS=""
 
 
 RDEPEND="nls? ( sys-devel/gettext )
