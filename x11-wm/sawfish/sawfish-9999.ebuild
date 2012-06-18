@@ -8,7 +8,7 @@ WANT_AUTOCONF="latest"
 
 SITEFILE=50sawfish-gentoo.el
 
-inherit autotools elisp-common eutils git-2 libtool
+inherit autotools elisp-common eutils git-2
 
 IUSE="debug emacs gnome kde nls pango"
 
