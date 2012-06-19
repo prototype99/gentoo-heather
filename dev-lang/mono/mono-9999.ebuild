@@ -15,10 +15,8 @@ KEYWORDS=""
 
 IUSE="minimal"
 
-#dev-lang/mono
 #Bash requirement is for += operator
-COMMONDEPEND="!dev-util/monodoc 
-|| ( <dev-lang/mono-9999 >=dev-lang/mono-9999 )
+COMMONDEPEND="!dev-util/monodoc dev-lang/mono
 	!minimal? ( dev-dotnet/libgdiplus )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
