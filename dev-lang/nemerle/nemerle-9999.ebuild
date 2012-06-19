@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/mono"
+DEPEND=">=dev-lang/mono-2.11"
 RDEPEND="${DEPEND}"
 
 src_configure() {
