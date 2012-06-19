@@ -15,8 +15,9 @@ KEYWORDS=""
 
 IUSE="minimal"
 
+#dev-lang/mono
 #Bash requirement is for += operator
-COMMONDEPEND="!dev-util/monodoc dev-lang/mono
+COMMONDEPEND="!dev-util/monodoc
 	!minimal? ( dev-dotnet/libgdiplus )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
@@ -28,6 +29,9 @@ DEPEND="${COMMONDEPEND}
 	>=app-shells/bash-3.2"
 
 RESTRICT="test"
+USE_SNAPSHOT="yes"
+
+QA_FLAGS_IGNORED="/usr/lib64/mono/4.5/mcs.exe.so /usr/lib64/mono/4.5/mscorlib.dll.so"
 
 pkg_setup() {
 	if use kernel_linux
