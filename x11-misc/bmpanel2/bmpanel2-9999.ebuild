@@ -1,14 +1,18 @@
-EAPI=3
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+EAPI="4"
 
 inherit cmake-utils
-inherit git
+inherit git-2
 
 EGIT_REPO_URI="git://github.com/nsf/bmpanel2.git"
 
 DESCRIPTION="Great panel for your desktop, support clock , task manage , workspace and more"
 HOMEPAGE="http://code.google.com/p/bmpanel2/"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

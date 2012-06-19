@@ -13,7 +13,7 @@ LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDP
 SLOT="0"
 KEYWORDS=""
 
-IUSE="minimal pax_kernel xen"
+IUSE="minimal"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!dev-util/monodoc
@@ -25,8 +25,7 @@ RDEPEND="${COMMONDEPEND}
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
 	virtual/yacc
-	>=app-shells/bash-3.2
-	pax_kernel? ( sys-apps/paxctl )"
+	>=app-shells/bash-3.2"
 
 RESTRICT="test"
 
@@ -90,7 +89,6 @@ src_configure() {
 		--disable-quiet-build \
 		--without-moonlight \
 		--with-libgdiplus=$(use minimal && printf "no" || printf "installed" ) \
-		$(use_with xen xen_opt) \
 		--without-ikvm-native \
 		--with-jit \
 		--disable-dtrace \

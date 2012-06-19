@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI="2"
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+EAPI="4"
 
 inherit git-2 autotools eutils toolchain-funcs multilib
 
@@ -31,16 +29,19 @@ src_unpack() {
 	eautoreconf || die "eautoreconf failed"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--prefix=/usr || die "configure failed"
+}
+
+src_compile() {
 	emake || die "make failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* TODO
 	docinto examples
 	dodoc examples/*
 }

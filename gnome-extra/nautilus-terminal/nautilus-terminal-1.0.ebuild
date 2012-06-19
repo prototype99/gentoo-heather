@@ -1,4 +1,4 @@
-# Copyright 1999-20112 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,13 +14,13 @@ KEYWORDS="*"
 IUSE=""
 
 RDEPEND=">=gnome-base/nautilus-3.2
-         >=dev-python/nautilus-python-1.0
-         x11-libs/vte[introspection]"
+	>=dev-python/nautilus-python-1.0
+	x11-libs/vte[introspection]"
 
 DEPEND="${EPEND}"
 
 S="${WORKDIR}/${PN}_${PV}_src"
 
 src_install(){
-	./install.sh -p ${D}
+	./install.sh -p "${D}"
 }

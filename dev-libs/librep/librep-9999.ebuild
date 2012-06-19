@@ -1,10 +1,8 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
 EAPI="2"
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
 
 inherit git-2 autotools eutils toolchain-funcs multilib elisp-common
 
@@ -30,41 +28,39 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	git-2_src_unpack
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-disable-elisp.patch
-	eautoreconf || die "eautoreconf failed"
 }
 
-src_compile() {
+src_prepare() {
+#	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-disable-elisp.patch
+}
 
+src_configure() {
+	eautoreconf || die "eautoreconf failed"
 	econf \
 		--prefix=/usr \
 		$(use_with gmp) \
 		$(use_with libffi ffi) \
 		$(use_with readline) || die "configure failed"
+}
 
+src_compile() {
 	emake || die "make failed"
-
 	if use emacs; then
 		elisp-compile rep-debugger.el || die "elisp-compile failed"
 	fi
-
 }
 
 src_install() {
-
 	make DESTDIR="${D}" install || die "make install failed"
-
-	dodoc COPYING ChangeLog INSTALL MAINTAINERS README TODO
+	dodoc ChangeLog INSTALL MAINTAINERS README TODO
 	docinto doc
 	dodoc doc/*
-
 	if use emacs; then
 		elisp-install ${PN} rep-debugger.{el,elc} || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" \
 			|| die "elisp-site-file-install failed"
 	fi
-
 }
 
 pkg_postinst() {

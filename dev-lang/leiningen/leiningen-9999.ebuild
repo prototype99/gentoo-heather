@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header$
+# $Header: $
 
 EAPI=2
 inherit java-pkg-2
@@ -26,7 +26,7 @@ SITEFILE="70${PN}-gentoo.el"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	cp /usr/portage/distfiles/${A} ${WORKDIR}
+	cp /usr/portage/distfiles/${A} "${WORKDIR}"
 }
 
 src_install() {

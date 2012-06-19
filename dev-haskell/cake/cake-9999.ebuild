@@ -1,3 +1,7 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
 EAPI=4
 
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
@@ -9,23 +13,24 @@ EGIT_REPO_URI="git://github.com/Nensha/cake.git"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="test"
 RESTRICT=test # almost work. fail on Development/Shake/Report.hs
 
-RDEPEND="dev-haskell/binary[profile?]
-		>=dev-haskell/deepseq-1.1[profile?] <dev-haskell/deepseq-1.4[profile?]
-		>=dev-haskell/hashable-1.1.2.3[profile?] <dev-haskell/hashable-1.2[profile?]
-		dev-haskell/random[profile?]
-		dev-haskell/time[profile?]
-        dev-haskell/glob[profile?]
-        dev-haskell/parallel-io[profile?]
-        dev-haskell/canonical-filepath[profile?]
-		>=dev-haskell/transformers-0.2[profile?] <dev-haskell/transformers-0.4[profile?]
-		>=dev-haskell/unordered-containers-0.2.1[profile?] <dev-haskell/unordered-containers-0.3[profile?]
-		>=dev-lang/ghc-6.10.1"
+#	dev-haskell/glob
+#	dev-haskell/parallel-io
+#	dev-haskell/canonical-filepath
+#	dev-haskell/unordered-containers
+
+RDEPEND="dev-haskell/binary
+	dev-haskell/deepseq
+	dev-haskell/hashable
+	dev-haskell/random
+	dev-haskell/time
+	dev-haskell/transformers
+	dev-lang/ghc"
 DEPEND="${RDEPEND}
-		>=dev-haskell/cabal-1.6"
+	>=dev-haskell/cabal-1.6"
 
 src_configure() {
 	cabal_src_configure $(cabal_flag test testprog)

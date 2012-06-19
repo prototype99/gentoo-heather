@@ -1,10 +1,8 @@
-# Copyright 1999-2012 Gentoo Technologies, Inc.
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 
-EAPI="2"
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+EAPI="4"
 
 inherit git-2 autotools
 
@@ -20,27 +18,26 @@ IUSE=""
 DEPEND=">=x11-wm/sawfish-1.6.1"
 
 RDEPEND="${DEPEND}
-		!x11-misc/sawfish-pager"
+	!x11-misc/sawfish-pager"
 
 src_unpack() {
 	git-2_src_unpack
 	cd "${S}"
-    eautoreconf || die "eautoreconf failed"
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc COPYING INSTALL NEWS README TODO
+	make DESTDIR="${D}" install || die
+	dodoc INSTALL NEWS README TODO
 }
 
 pkg_postinst() {
-    einfo
-    einfo "To use sawfish-pager add:"
-    einfo
-    einfo "(require 'sawfish.wm.ext.pager)"
-    einfo "(add-hook 'after-initialization-hook pager t)"
-    einfo
-    einfo "in your ~/.sawfishrc file."
-    einfo
+	einfo
+	einfo "To use sawfish-pager add:"
+	einfo
+	einfo "(require 'sawfish.wm.ext.pager)"
+	einfo "(add-hook 'after-initialization-hook pager t)"
+	einfo
+	einfo "in your ~/.sawfishrc file."
+	einfo
 }
-
