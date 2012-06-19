@@ -17,7 +17,7 @@ IUSE="minimal"
 
 #Bash requirement is for += operator
 COMMONDEPEND="!dev-util/monodoc
-	!minimal? ( =dev-dotnet/libgdiplus-2.10 )
+	!minimal? ( dev-dotnet/libgdiplus )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
 	|| ( www-client/links www-client/lynx )"
