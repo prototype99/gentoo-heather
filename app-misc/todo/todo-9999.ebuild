@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-db/sqlite"
+DEPEND="sys-devel/gcc
+	dev-db/sqlite"
 RDEPEND="${DEPEND}"
 
 src_install() {
