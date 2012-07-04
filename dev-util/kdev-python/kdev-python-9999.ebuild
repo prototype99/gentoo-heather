@@ -18,5 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-util/kdevelop
+>=dev-util/kdevplatform-1.3.60
 dev-util/automoc"
 RDEPEND="${DEPEND}"
