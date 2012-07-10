@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit cmake-utils git-2
+inherit git-2 cmake-utils
 
 EGIT_REPO_URI="git://anongit.kde.org/kdev-python"
 
@@ -22,3 +22,14 @@ dev-util/kdevelop-pg-qt
 >=dev-util/kdevplatform-1.3.60
 dev-util/automoc"
 RDEPEND="${DEPEND}"
+
+#src_compile() {
+    #sed -i 's|#!.*python$|&2|' python-src/Parser/asdl_c.py
+    #cmake "../python" \
+    #    -DCMAKE_SKIP_RPATH=ON \
+    #    -DCMAKE_BUILD_TYPE=RELWITHDEBINFO \
+    #    -DCMAKE_{SHARED,MODULE,EXE}_LINKER_FLAGS='-Wl,--no-undefined -Wl,--as-needed' \
+    #    -DCMAKE_INSTALL_PREFIX=/usr
+#    make parser
+#    emake || die "emake failed"
+#}
