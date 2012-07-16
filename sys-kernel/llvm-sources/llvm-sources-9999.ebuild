@@ -15,10 +15,11 @@ HOMEPAGE="http://www.kernel.org"
 EGIT_REPO_URI="http://git.linuxfoundation.org/llvm-setup.git"
 EGIT_PROJECT="linux"
 
+#dev-vcs/subversion - used to build clang but... ?
 DEPEND="dev-util/cmake
 sys-fs/multipath-tools
-dev-vcs/subversion
-sys-libs/zlib"
+sys-libs/zlib
+sys-devel/clang"
 RDEPEND="${DEPEND}"
 
 KEYWORDS=""
