@@ -19,7 +19,7 @@ dev-util/automoc"
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	sed -i 's|#!.*python$|&2|' "${S}/Parser/asdl_c.py"
+	sed -i 's|#!.*python$|&2|' python-src/Parser/asdl_c.py
 	local mycmakeargs= "
         -DCMAKE_SKIP_RPATH=ON \
         -DCMAKE_BUILD_TYPE=RELWITHDEBINFO \
