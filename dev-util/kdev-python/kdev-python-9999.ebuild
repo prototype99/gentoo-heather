@@ -30,5 +30,5 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile parser
-	cmake-utils_src_compile install
+	cmake-utils_src_compile
 }
