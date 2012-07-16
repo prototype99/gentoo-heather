@@ -5,6 +5,6 @@
 		<email>nengraphy@gmail.com</email>
 	</maintainer>
 	<longdescription>
-	  Pure kernel with no patches, same as vanilla sources
+	  LLVM Clang Kernel
 	</longdescription>
 </pkgmetadata>

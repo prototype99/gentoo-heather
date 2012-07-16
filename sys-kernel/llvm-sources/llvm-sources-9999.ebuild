@@ -12,7 +12,14 @@ inherit kernel-2 git-2
 detect_version
 DESCRIPTION="LTS Kernel, I randomly desired to support this one, I will update it when I want to."
 HOMEPAGE="http://www.kernel.org"
-EGIT_REPO_URI="git://github.com/torvalds/linux.git"
+EGIT_REPO_URI="http://git.linuxfoundation.org/llvm-setup.git"
 EGIT_PROJECT="linux"
+
+DEPEND="dev-util/cmake
+sys-fs/multipath-tools
+dev-vcs/subversion
+sys-libs/zlib"
+RDEPEND="${DEPEND}"
+
 KEYWORDS=""
 IUSE=""
