@@ -18,6 +18,15 @@ dev-util/kdevelop-pg-qt
 dev-util/automoc"
 RDEPEND="${DEPEND}"
 
+src_configure() {
+	local mycmakeargs= "
+        -DCMAKE_SKIP_RPATH=ON \
+        -DCMAKE_BUILD_TYPE=RELWITHDEBINFO \
+        -DCMAKE_{SHARED,MODULE,EXE}_LINKER_FLAGS='-Wl,--no-undefined -Wl,--as-needed' \
+        -DCMAKE_INSTALL_PREFIX=/usr"
+	cmake-utils_src_configure
+}
+
 src_compile() {
 	cmake-utils_src_compile parser
 	cmake-utils_src_compile install
