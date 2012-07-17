@@ -10,7 +10,7 @@ CKV=`date +%F`
 ETYPE="sources"
 inherit kernel-2 git-2
 detect_version
-DESCRIPTION="LTS Kernel, I randomly desired to support this one, I will update it when I want to."
+DESCRIPTION="Linux kernel to build with llvm and clang"
 HOMEPAGE="http://www.kernel.org"
 EGIT_REPO_URI="http://git.linuxfoundation.org/llvm-setup.git"
 EGIT_PROJECT="linux"
