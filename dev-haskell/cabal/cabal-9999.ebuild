@@ -22,15 +22,19 @@ IUSE="doc"
 
 RESTRICT="test" # avoid circular deps
 
-DEPEND=">=dev-lang/ghc-6.10.1"
+DEPEND=">=dev-lang/ghc-7"
 RDEPEND="${DEPEND}
 		virtual/pkgconfig"
 # cabal uses dev-util/pkgconfig using runtime to resolve C dependencies, so
 # repoman's RDEPEND.suspect QA does not apply here
 
-S="${WORKDIR}/${MY_PN}-${MY_PV}"
+S="${WORKDIR}/${MY_PN}" #-${MY_PV}"
 
 CABAL_CORE_LIB_GHC_PV="7.5.*"
+
+src_prepare() { 
+	cp -rf "${S}/Cabal" "${WORKDIR}" || die 
+}
 
 src_configure() {
 	if ! cabal-is-dummy-lib; then
