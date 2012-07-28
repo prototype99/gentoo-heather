@@ -6,7 +6,7 @@ EAPI=4
 inherit git-2
 
 DESCRIPTION="AWESOME TODO LIST"
-EGIT_REPO_URI="git://github.com/Nensha/todo.git"
+EGIT_REPO_URI="git://github.com/nCdy/todo.git"
 HOMEPAGE="http://nengraphy.com"
 
 LICENSE="GPL-3"

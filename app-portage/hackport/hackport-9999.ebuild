@@ -5,13 +5,13 @@
 EAPI=4
 
 CABAL_FEATURES="bin test-suite"
-EGIT_REPO_URI="git://github.com/Nensha/hackport.git"
+EGIT_REPO_URI="git://github.com/nCdy/hackport.git"
 EGIT_HAS_SUBMODULES="true"
 
 inherit git-2 haskell-cabal
 
 DESCRIPTION="Hackage and Portage integration tool"
-HOMEPAGE="https://github.com/Nensha/hackport"
+HOMEPAGE="https://github.com/nCdy/hackport"
 
 LICENSE="GPL-2"
 SLOT="0"
