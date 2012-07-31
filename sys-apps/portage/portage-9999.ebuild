@@ -10,16 +10,9 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="build doc epydoc +ipc pypy1_9 python2 python3 selinux xattr"
+IUSE="build doc selinux xattr"
 
-# Import of the io module in python-2.6 raises ImportError for the
-# thread module if threading is disabled.
-python_dep_ssl="python3? ( =dev-lang/python-3*[ssl] )
-	!pypy1_9? ( !python2? ( !python3? (
-		|| ( >=dev-lang/python-2.7[ssl] dev-lang/python:2.6[threads,ssl] )
-	) ) )
-	pypy1_9? ( !python2? ( !python3? ( dev-python/pypy:1.9[bzip2,ssl] ) ) )
-	python2? ( !python3? ( || ( dev-lang/python:2.7[ssl] dev-lang/python:2.6[ssl,threads] ) ) )"
+python_dep_ssl="=dev-lang/python-3*[ssl]"
 python_dep="${python_dep_ssl//\[ssl\]}"
 python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
@@ -27,8 +20,7 @@ python_dep="${python_dep//ssl,}"
 # The pysqlite blocker is for bug #282760.
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
-	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
-	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
+	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )"
 # Require sandbox-2.2 for bug #288863.
 # For xattr, we can spawn getfattr and setfattr from sys-apps/attr, but that's
 # quite slow, so it's not considered in the dependencies as an alternative to
@@ -84,47 +76,7 @@ pkg_setup() {
 	# Bug #359731 - Die early if get_libdir fails.
 	[[ -z $(get_libdir) ]] && \
 		die "get_libdir returned an empty string"
-
-	if use python2 && use python3 ; then
-		ewarn "Both python2 and python3 USE flags are enabled, but only one"
-		ewarn "can be in the shebangs. Using python3."
-	fi
-	if use pypy1_9 && use python3 ; then
-		ewarn "Both pypy1_9 and python3 USE flags are enabled, but only one"
-		ewarn "can be in the shebangs. Using python3."
-	fi
-	if use pypy1_9 && use python2 ; then
-		ewarn "Both pypy1_9 and python2 USE flags are enabled, but only one"
-		ewarn "can be in the shebangs. Using python2"
-	fi
-	if ! use pypy1_9 && ! use python2 && ! use python3 && \
-		! compatible_python_is_selected ; then
-		ewarn "Attempting to select a compatible default python interpreter"
-		local x success=0
-		for x in /usr/bin/python2.* ; do
-			x=${x#/usr/bin/python2.}
-			if [[ $x -ge 6 ]] 2>/dev/null ; then
-				eselect python set python2.$x
-				if compatible_python_is_selected ; then
-					elog "Default python interpreter is now set to python-2.$x"
-					success=1
-					break
-				fi
-			fi
-		done
-		if [ $success != 1 ] ; then
-			eerror "Unable to select a compatible default python interpreter!"
-			die "This version of portage requires at least python-2.6 to be selected as the default python interpreter (see \`eselect python --help\`)."
-		fi
-	fi
-
-	if use python3; then
-		python_set_active_version 3
-	elif use python2; then
-		python_set_active_version 2
-	elif use pypy1_9; then
-		python_set_active_version 2.7-pypy-1.9
-	fi
+	python_set_active_version 3
 }
 
 src_prepare() {
@@ -144,29 +96,14 @@ src_prepare() {
 	sed -e "1s/VERSION/${_version}/" -i man/* || \
 		die "Failed to patch VERSION in man page headers"
 
-	if ! use ipc ; then
-		einfo "Disabling ipc..."
-		sed -e "s:_enable_ipc_daemon = True:_enable_ipc_daemon = False:" \
-			-i pym/_emerge/AbstractEbuildProcess.py || \
-			die "failed to patch AbstractEbuildProcess.py"
-	fi
-
 	if use xattr && use kernel_linux ; then
 		einfo "Adding FEATURES=xattr to make.globals ..."
 		echo -e '\nFEATURES="${FEATURES} xattr"' >> cnf/make.globals \
 			|| die "failed to append to make.globals"
 	fi
 
-	if use python3; then
-		einfo "Converting shebangs for python3..."
-		python_convert_shebangs -r 3 .
-	elif use python2; then
-		einfo "Converting shebangs for python2..."
-		python_convert_shebangs -r 2 .
-	elif use pypy1_9; then
-		einfo "Converting shebangs for pypy-c1.9..."
-		python_convert_shebangs -r 2.7-pypy-1.9 .
-	fi
+	einfo "Converting shebangs for python3..."
+	python_convert_shebangs -r 3 .
 
 	if [[ -n ${EPREFIX} ]] ; then
 		einfo "Setting portage.const.EPREFIX ..."
@@ -221,11 +158,6 @@ src_prepare() {
 src_compile() {
 	if use doc; then
 		emake docbook || die
-	fi
-
-	if use epydoc; then
-		einfo "Generating api docs"
-		emake epydoc || die
 	fi
 }
 
