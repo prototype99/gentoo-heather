@@ -19,10 +19,7 @@ IUSE=""
 DEPEND=">=dev-lang/mono-2.11"
 RDEPEND="${DEPEND}"
 
-src_configure() {
-cd "${S}"
-}
-
+#src_configure() {;}
 src_compile() {
 	elog "Nemerle sources compiling : "
 	xbuild NemerleAll-Mono.nproj /t:Stage4 /p:Configuration=Release
