@@ -22,8 +22,8 @@ IUSE="doc"
 
 RESTRICT="test" # avoid circular deps
 
-RDEPEND=">=dev-lang/ghc-7"
-DEPEND="${DEPEND}
+DEPEND=">=dev-lang/ghc-7"
+RDEPEND="${DEPEND}
 		virtual/pkgconfig"
 # cabal uses dev-util/pkgconfig using runtime to resolve C dependencies, so
 # repoman's RDEPEND.suspect QA does not apply here

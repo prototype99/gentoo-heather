@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/librep-9999
 	!x11-libs/rep-gtk-svn"
 
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.22"
+	virtual/pckgconfig"
 
 src_unpack() {
 	git-2_src_unpack
