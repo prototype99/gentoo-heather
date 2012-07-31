@@ -14,8 +14,7 @@ DESCRIPTION="Linden autobuild"
 HOMEPAGE="http://hg.secondlife.com/autobuild"
 SRC_URI=""
 
-#TODO: Add license
-LICENSE=""
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
@@ -25,7 +24,7 @@ RDEPEND="${DEPEND}"
 
 install_into_site_packages() {
 insinto $(python_get_sitedir)
-cd ${S}
+cd "${S}"
 doins -r autobuild
 }
 
