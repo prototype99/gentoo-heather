@@ -27,7 +27,7 @@ DESCRIPTION="Hardened kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
 IUSE=""
 
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~amd64 ~x86"
 
 RDEPEND=">=sys-devel/gcc-4.5"
 
