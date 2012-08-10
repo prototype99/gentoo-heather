@@ -67,8 +67,6 @@ DEPEND="${RDEPEND}
 		)
 		"
 
-#PATCHES=("${FILESDIR}/${PN}-1.9.3-ghc-7.5.patch")
-
 src_configure() {
 	cabal_src_configure \
 		$(cabal_flag test tests)

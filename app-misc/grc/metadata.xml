@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>nengraphy@gmail.com</email>
+		<email>codecavesy@gmail.com</email>
 	</maintainer>
 	<longdescription>
-	  Shell output completion on python.
+	  Generic colorizer for terminal applications.
 	</longdescription>
 </pkgmetadata>

@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>nengraphy@gmail.com</email>
+		<email>codecaves@gmail.com</email>
 	</maintainer>
 	<longdescription>
-	  Functional local todo list in C and SQLite
+	  Local todo list in C and SQLite
 	</longdescription>
 </pkgmetadata>

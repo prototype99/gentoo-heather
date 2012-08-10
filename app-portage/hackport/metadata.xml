@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>haskell</herd>
 	<maintainer>
-		<email>haskell@gentoo.org</email>
+		<email>codecaves@gmail.com</email>
 	</maintainer>
 	<longdescription>
 		A command line tool to manage an overlay of Gentoo ebuilds
