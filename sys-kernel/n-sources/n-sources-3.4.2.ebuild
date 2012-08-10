@@ -29,7 +29,7 @@ DESCRIPTION="Kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org"
 IUSE=""
 
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~amd64 ~x86"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc amd64 x86"
 
 RDEPEND=">=sys-devel/gcc-4.5"
 
