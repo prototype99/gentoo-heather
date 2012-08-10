@@ -33,17 +33,20 @@ ${PF_URI}"
 KV_FULL="${PVR}-n"
 S="${WORKDIR}"/linux-"${KV_FULL}"
 
-pkg_setup() {
-	UNIPATCH_LIST="${UNIPATCH_LIST}\
-		${FILESDIR}/4400_logo_larry_the_cow.patch\
-		${DISTDIR}"/"${PF_FILE}"
-}
-
 DESCRIPTION="Kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org"
 IUSE=""
 
 KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~amd64 ~x86"
+
+pkg_setup() {
+	UNIPATCH_LIST="${UNIPATCH_LIST}\
+		${FILESDIR}/4400_logo_larry_the_cow.patch"
+}
+
+src_prepare(){
+	epatch "${DISTDIR}"/"${PF_FILE}"
+}
 
 pkg_postinst() {
 	kernel-2_pkg_postinst
