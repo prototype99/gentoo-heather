@@ -20,7 +20,6 @@ ${ARCH_URI}"
 
 pkg_setup() {
 	UNIPATCH_LIST="${UNIPATCH_LIST}\
-		${FILESDIR}/4310_aufs3.patch\
 		${FILESDIR}/4400_logo_larry_the_cow.patch\
 		${FILESDIR}/9999_aufs3-grsec.patch"
 }
