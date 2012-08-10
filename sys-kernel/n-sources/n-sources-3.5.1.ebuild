@@ -1,45 +1,44 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/n-sources/n-sources-3.5.1.ebuild,v 1.2 2012/06/29 00:11:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.5.1.ebuild,v 1.1 2012/08/05 18:46:09 hwoarang Exp $
 
-EAPI="4"
-ETYPE="sources"
+EAPI="2"
 
-inherit versionator kernel-2
+inherit versionator
 
 COMPRESSTYPE=".bz2"
 K_USEPV="yes"
-K_WANT_GENPATCHES="base"
-K_GENPATCHES_VER="1"
-K_DEBLOB_AVAILABLE="0"
-K_SECURITY_UNSUPPORTED="1"
-
 UNIPATCH_STRICTORDER="yes"
-CKV="$(get_version_component_range 1-2)"
+K_SECURITY_UNSUPPORTED="1"
+K_DEBLOB_AVAILABLE="0"
 
+CKV="$(get_version_component_range 1-2)"
+ETYPE="sources"
+inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
+#K_WANT_GENPATCHES="base"
+#K_GENPATCHES_VER="1"
+
+DESCRIPTION="Kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
+HOMEPAGE="http://www.gentoo.org"
 
 PF_FILE="patch-${PV}-pf${COMPRESSTYPE}"
 PF_URI="http://pf.natalenko.name/sources/$(get_version_component_range 1-2)/${PF_FILE}"
 
-SRC_URI=" \
-${KERNEL_URI} \
-${HGPV_URI} \
-${GENPATCHES_URI} \
-${ARCH_URI} \
-${PF_URI}"
+#Disabled set:
+#${HGPV_URI} \
+#${GENPATCHES_URI} \
+#${ARCH_URI}
+SRC_URI="${KERNEL_URI} ${PF_URI}"
 
-KV_FULL="${PVR}-n"
-S="${WORKDIR}"/linux-"${KV_FULL}"
-
-DESCRIPTION="Kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
-HOMEPAGE="http://www.gentoo.org"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~amd64 ~x86"
+KV_FULL="${PVR}-pf"
+S="${WORKDIR}"/linux-"${KV_FULL}"
 
-pkg_setup() {
+pkg_setup(){
 	UNIPATCH_LIST="${UNIPATCH_LIST}\
 		${FILESDIR}/4400_logo_larry_the_cow.patch"
 	kernel-2_pkg_setup
