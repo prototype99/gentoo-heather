@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-3.5.ebuild,v 1.2 2012/06/29 00:11:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/n-sources/n-sources-3.5.1.ebuild,v 1.2 2012/06/29 00:11:38 blueness Exp $
 
 EAPI="4"
 ETYPE="sources"
@@ -42,6 +42,7 @@ KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~amd64 ~x86"
 pkg_setup() {
 	UNIPATCH_LIST="${UNIPATCH_LIST}\
 		${FILESDIR}/4400_logo_larry_the_cow.patch"
+	kernel-2_pkg_setup
 }
 
 src_prepare(){
