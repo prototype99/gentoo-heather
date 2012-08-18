@@ -38,9 +38,10 @@ IUSE=""
 KV_FULL="${PVR}-pf"
 S="${WORKDIR}"/linux-"${KV_FULL}"
 
+#${FILESDIR}/4400_logo_larry_the_cow.patch
 pkg_setup(){
 	UNIPATCH_LIST="${UNIPATCH_LIST}\
-		${FILESDIR}/4400_logo_larry_the_cow.patch"
+		https://raw.github.com/nCdy/Larry/master/README.md"
 	kernel-2_pkg_setup
 }
 
