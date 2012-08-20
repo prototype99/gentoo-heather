@@ -41,7 +41,7 @@ S="${WORKDIR}"/linux-"${KV_FULL}"
 #${FILESDIR}/4400_logo_larry_the_cow.patch
 pkg_setup(){
 	UNIPATCH_LIST="${UNIPATCH_LIST}\
-		https://raw.github.com/nCdy/Larry/master/README.md"
+	https://raw.github.com/nCdy/Larry/master/logo_larry_the_cow.patch"
 	kernel-2_pkg_setup
 }
 
