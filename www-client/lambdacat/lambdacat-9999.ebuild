@@ -9,7 +9,7 @@ EAPI=4
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal git-2
 
-DESCRIPTION="lambdacat"
+DESCRIPTION="lambdacat web browser"
 HOMEPAGE="http://github.com/nCdy/lambdacat"
 EGIT_REPO_URI="git://github.com/nCdy/lambdacat.git"
 
