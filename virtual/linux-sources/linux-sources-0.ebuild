@@ -35,4 +35,5 @@ RDEPEND="|| (
 		sys-kernel/xen-sources
 		sys-kernel/zen-sources
 		sys-kernel/n-sources
+		sys-kernel/maria-sharapova
 	)"
