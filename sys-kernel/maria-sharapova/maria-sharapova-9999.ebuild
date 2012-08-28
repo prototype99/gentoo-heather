@@ -13,28 +13,24 @@ K_DEBLOB_AVAILABLE=0
 CKV='3.99'
 
 ETYPE="sources"
-
 EGIT_REPO_URI="git://github.com/nCdy/linux.git"
 
 inherit kernel-2 git-2
 detect_version
 
 K_NOSETEXTRAVERSION="don't_set_it"
-DESCRIPTION="Kernel Live Sources"
+DESCRIPTION="Kernel Live Sources with nCdy patches"
 HOMEPAGE="http://nCdy.org"
 
 IUSE="+minimal"
-
 KEYWORDS=""
 
-K_EXTRAEINFO="Hello there"
+K_EXTRAEINFO="nCdy kernel"
 
 pkg_setup(){
-	ewarn "select new kernel via"
-	einfo "eselect kernel set linux-3.99-zen1"
-	if use minimal; then
-		EGIT_OPTIONS="--depth 1"
-		EGIT_NONBARE="1"
-	fi
+	ewarn "each time on update select kernel via"
+	einfo "eselect kernel set linux-3.99-maria0"
+	EGIT_OPTIONS="--depth 1"
+	EGIT_NONBARE="1"
 	kernel-2_pkg_setup
 }
