@@ -13,7 +13,7 @@ K_DEBLOB_AVAILABLE=0
 CKV='3.99'
 
 ETYPE="sources"
-EGIT_REPO_URI="git://github.com/nCdy/linux.git"
+EGIT_REPO_URI="git://github.com/nCdy/maria-sharapova.git"
 
 inherit kernel-2 git-2
 detect_version
