@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ EGIT_HAS_SUBMODULES="true"
 inherit git-2 haskell-cabal
 
 DESCRIPTION="Hackage and Portage integration tool"
-HOMEPAGE="https://github.com/nCdy/hackport"
+HOMEPAGE="https://github.com/gentoo-haskell/hackport"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.10
 		>=dev-haskell/http-4000.0.3
 		dev-haskell/mtl
+		dev-haskell/missingh
 		dev-haskell/network
 		dev-haskell/parsec
 		dev-haskell/regex-compat
