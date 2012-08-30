@@ -19,18 +19,11 @@ inherit kernel-2 git-2
 detect_version
 
 K_NOSETEXTRAVERSION="don't_set_it"
-DESCRIPTION="Kernel Live Sources with nCdy patches"
+DESCRIPTION="Special Kernel Live Sources for Tennis players"
 HOMEPAGE="http://nCdy.org"
-
-IUSE="+minimal"
 KEYWORDS=""
-
 K_EXTRAEINFO="nCdy kernel"
 
 pkg_setup(){
-	ewarn "each time on update select kernel via"
-	einfo "eselect kernel set linux-3.99-maria0"
-	EGIT_OPTIONS="--depth 1"
-	EGIT_NONBARE="1"
 	kernel-2_pkg_setup
 }
