@@ -16,12 +16,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/mono"
+DEPEND=">dev-lang/mono-2.11.3"
 RDEPEND="${DEPEND}"
 
+src_configure() { 
+	elog "Just don't" 
+}
 src_compile() {
 	elog "Nemerle sources compiling : "
-	xbuild NemerleAll-Mono.nproj /t:Stage4 /p:Configuration=Release
+	xbuild NemerleAll-Mono.nproj /t:Stage1 /p:Configuration=Release
 }
 
 src_install()
