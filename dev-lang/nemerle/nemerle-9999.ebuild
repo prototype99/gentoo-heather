@@ -19,8 +19,8 @@ IUSE=""
 DEPEND=">dev-lang/mono-2.11.3"
 RDEPEND="${DEPEND}"
 
-src_configure() { 
-	elog "Just don't" 
+src_configure() {
+	elog "Just don't"
 }
 src_compile() {
 	elog "Nemerle sources compiling : "
