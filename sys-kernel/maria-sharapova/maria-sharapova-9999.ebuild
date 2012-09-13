@@ -9,12 +9,12 @@ K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE=0
-IUSE="+emacs"
+IUSE="+nCdy"
 
 CKV='3.99'
 
 ETYPE="sources"
-if use emacs;
+if use nCdy;
 then EGIT_REPO_URI="git://github.com/nCdy/maria-sharapova.git"
 else EGIT_REPO_URI="git@github.com:nCdy/maria-sharapova.git"
 fi

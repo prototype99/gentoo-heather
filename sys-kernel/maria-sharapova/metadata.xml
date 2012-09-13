@@ -2,9 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>codecaves@gmail.com</email>
+		<email>nCdy@live.com</email>
 	</maintainer>
 	<longdescription>
-	  linux kernel
+	  linux kernel for tennis players
 	</longdescription>
+	<use>
+	  <flag name='nCdy'>Enables development git repository
+	  <pkg>sys-kernel/maria-sharapova</pkg>Dev repository
+	  for nCdy Linux Kernel</flag>
+	</use>
 </pkgmetadata>
