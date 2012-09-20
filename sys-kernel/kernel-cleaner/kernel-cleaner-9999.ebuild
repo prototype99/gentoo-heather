@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="app-shells/bash
 		sys-apps/gawk"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		sys-provess/parallel"
 
 src_install(){
 	dosbin kernel-cleaner
