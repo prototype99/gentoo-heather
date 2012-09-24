@@ -8,7 +8,7 @@ EGIT_REPO_URI="git://github.com/fsharp/fsharp.git"
 
 inherit git-2 autotools mono eutils
 
-DESCRIPTION="The F# Compiler"
+DESCRIPTION="The F# 2 Compiler (OpenSource release; GitHub sources)"
 HOMEPAGE="https://github.com/fsharp/fsharp"
 SRC_URI=""
 
