@@ -33,7 +33,7 @@ create_exe_wrappers() {
 
 src_install() {
 	insinto "/usr/$(get_libdir)/${PN}"
-	doins lkg/FSharp-4.0.30319.1/bin* || die "installing libraries failed"
+	doins lkg/FSharp-4.0.30319.1/bin/* || die "installing libraries failed"
 
 	local libname=lkg/FSharp-4.0.30319.1/bin/FSharp.Core.dll
 
