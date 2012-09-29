@@ -15,8 +15,8 @@ CKV='3.99'
 
 ETYPE="sources"
 if use nCdy;
-then EGIT_REPO_URI="git://github.com/nCdy/maria-sharapova.git"
-else EGIT_REPO_URI="git@github.com:nCdy/maria-sharapova.git"
+then EGIT_REPO_URI="git@github.com:nCdy/maria-sharapova.git"
+else EGIT_REPO_URI="git://github.com/nCdy/maria-sharapova.git"
 fi
 
 inherit kernel-2 git-2
