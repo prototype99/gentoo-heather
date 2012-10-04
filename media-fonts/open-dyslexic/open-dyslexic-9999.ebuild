@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils font git-2
+inherit font git-2
 
 DESCRIPTION="new open sourced font created to increase readability for readers with dyslexia"
 HOMEPAGE="http://dyslexicfonts.com/"
@@ -18,7 +18,14 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+FONT_SUFFIX="ttf"
+S="${WORKDIR}"
+FONT_S="${S}"
+
 FONTDIR=/usr/share/fonts/open-dyslexis
+
+# Only installs fonts
+RESTRICT="strip binchecks"
 
 src_install() {
 	font_src_install
