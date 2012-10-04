@@ -15,6 +15,7 @@ Nengraphy overlay (by nCdy)
  - mono - mono live ebuild
  - nemerle - Nemerle programming language
  - ocs - embedded scheme on OCaml
+ - open-dyslexic - an fancy font
  - pandoc - pandoc live ebuild
  - portage - git portage sources (github fork)
  - rep-gtk - gtk bindings for librep
