@@ -33,9 +33,9 @@ create_exe_wrappers() {
 
 src_install() {
 	insinto "/usr/$(get_libdir)/${PN}"
-	doins lkg/FSharp-4.0.30319.1/bin/* || die "installing libraries failed"
+	doins lib/bootstrap/4.0/* || die "installing libraries failed"
 
-	local libname=lkg/FSharp-4.0.30319.1/bin/FSharp.Core.dll
+	local libname=lib/bootstrap/4.0/FSharp.Core.dll
 
 	egacinstall "${libname}" \
 		|| die "couldn't install ${libname} in the global assembly cache"
