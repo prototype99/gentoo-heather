@@ -5,6 +5,7 @@
 EAPI=4
 
 EGIT_REPO_URI="git://github.com/fsharp/fsharp.git"
+EGIT_MASTER="2.0"
 
 inherit git-2 autotools mono eutils
 
