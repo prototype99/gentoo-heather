@@ -3,10 +3,10 @@
 # $Header: $
 
 EAPI=4
-inherit git-2
+inherit mercurial
 
 DESCRIPTION="AWESOME TODO LIST"
-EGIT_REPO_URI="git://github.com/nCdy/ctodo.git"
+EHG_REPO_URI="https://bitbucket.org/nCdy/ctodo"
 HOMEPAGE="http://nengraphy.com"
 
 LICENSE="GPL-3"
