@@ -1,2 +1,2 @@
-Nengraphy overlay
-=================
+Personal Gentoo Overlay
+=======================
