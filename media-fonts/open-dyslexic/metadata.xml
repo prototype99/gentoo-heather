@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer>
+		<email>ashamelynn@gmail.com</email>
+	</maintainer>
 <longdescription>
 OpenDyslexic is a new open sourced font created to increase
 readability for readers with dyslexia. 
