@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: This ebuild is from nCdy overlay $
+# $Header: This ebuild is from Ashlyn overlay $
 
 EAPI="4"
 
@@ -9,24 +9,21 @@ K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE=0
-IUSE="nCdy"
+IUSE=""
 
 CKV='3.99'
 
 ETYPE="sources"
-if use nCdy;
-then EGIT_REPO_URI="git@github.com:nCdy/maria-sharapova.git"
-else EGIT_REPO_URI="git://github.com/nCdy/maria-sharapova.git"
-fi
+EGIT_REPO_URI="git://github.com/Ashlyn/linux.git"
 
 inherit kernel-2 git-2
 detect_version
 
 K_NOSETEXTRAVERSION="don't_set_it"
-DESCRIPTION="Special Kernel Live Sources for Tennis players"
-HOMEPAGE="http://nCdy.org"
+DESCRIPTION="Special Kernel Live Sources"
+HOMEPAGE="http://github.com/Ashlyn/linux"
 KEYWORDS=""
-K_EXTRAEINFO="GNU/Linux kernel for Tennis players"
+K_EXTRAEINFO="GNU/Linux kernel"
 
 pkg_setup(){
 	kernel-2_pkg_setup
