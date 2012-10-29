@@ -7,8 +7,8 @@ EAPI=4
 inherit git-2
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
-EGIT_REPO_URI="git://github.com/nCdy/ocs.git"
-HOMEPAGE="http://will.iki.fi/software/ocs/"
+EGIT_REPO_URI="git://github.com/Ashlyn/ocs.git"
+HOMEPAGE="http://github.com/Ashlyn/ocs"
 
 LICENSE="BSD"
 SLOT="0"
@@ -17,7 +17,3 @@ IUSE=""
 
 DEPEND="dev-lang/ocaml[ocamlopt]"
 RDEPEND="${DEPEND}"
-
-#src_install() {
-#	emake DESTDIR="${D}" install || die "Install failed"
-#}
