@@ -34,5 +34,5 @@ RDEPEND="|| (
 		sys-kernel/xbox-sources
 		sys-kernel/xen-sources
 		sys-kernel/zen-sources
-		sys-kernel/maria-sharapova
+		sys-kernel/linux
 	)"

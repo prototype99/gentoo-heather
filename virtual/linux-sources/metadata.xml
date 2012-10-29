@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>codecaves@gmail.com</email>
+		<email>ashamelynn@gmail.com</email>
 	</maintainer>
 	<longdescription>
-	  nCdy Linux kernel patchset
+	  Linux kernel enabel
 	</longdescription>
 </pkgmetadata>
