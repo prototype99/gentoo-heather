@@ -26,7 +26,7 @@ S=${WORKDIR}/${PN}
 RESTRICT=test
 
 RDEPEND="
-	dev-libs/icu
+	dev-libs/icu[static-libs]
 	net-misc/curl
 	dev-libs/nspr
 	sys-apps/util-linux
