@@ -60,7 +60,7 @@ prefix_src_archives() {
 	done
 }
 
-EGIT_REPO_URI="git://github.com/Ashlyn/portage.git"
+EGIT_REPO_URI="git://github.com/Cynede/portage.git"
 S="${WORKDIR}"/${PN}
 
 compatible_python_is_selected() {

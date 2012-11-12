@@ -6,8 +6,8 @@ EAPI=4
 inherit mercurial
 
 DESCRIPTION="AWESOME TODO LIST"
-EHG_REPO_URI="https://bitbucket.org/Ashlyn/ctodo"
-HOMEPAGE="https://bitbucket.org/Ashlyn/ctodo"
+EHG_REPO_URI="https://bitbucket.org/Cynede/ctodo"
+HOMEPAGE="https://bitbucket.org/Cynede/ctodo"
 
 LICENSE="GPL-3"
 SLOT="0"

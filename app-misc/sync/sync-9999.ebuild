@@ -6,8 +6,8 @@ EAPI=4
 inherit mercurial
 
 DESCRIPTION="AWESOME TODO LIST"
-EHG_REPO_URI="https://bitbucket.org/Ashlyn/Sync"
-HOMEPAGE="https://bitbucket.org/Ashlyn/Sync"
+EHG_REPO_URI="https://bitbucket.org/Cynede/Sync"
+HOMEPAGE="https://bitbucket.org/Cynede/Sync"
 
 LICENSE="GPL-3"
 SLOT="0"

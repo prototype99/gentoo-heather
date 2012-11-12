@@ -11,7 +11,7 @@ JS_P=js-1.8.0-rc1
 DESCRIPTION="A modern and featureful DVCS (distributed version control system)"
 HOMEPAGE="http://veracity-scm.com/"
 
-EGIT_REPO_URI="git://github.com/Ashlyn/veracity.git"
+EGIT_REPO_URI="git://github.com/Cynede/veracity.git"
 
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${JS_P}.tar.gz
 http://ftp.mozilla.org/pub/mozilla.org/js/${JS_P}.tar.gz"

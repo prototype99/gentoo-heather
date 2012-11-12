@@ -7,8 +7,8 @@ EAPI=4
 inherit git-2
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
-EGIT_REPO_URI="git://bitbucket.org/Ashlyn/ocs.git"
-HOMEPAGE="http://bitbucket.org/Ashlyn/ocs"
+EGIT_REPO_URI="git://bitbucket.org/Cynede/ocs.git"
+HOMEPAGE="http://bitbucket.org/Cynede/ocs"
 
 LICENSE="BSD"
 SLOT="0"

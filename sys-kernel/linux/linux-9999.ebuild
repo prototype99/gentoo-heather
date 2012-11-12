@@ -14,14 +14,14 @@ IUSE=""
 CKV='3.99'
 
 ETYPE="sources"
-EGIT_REPO_URI="git://github.com/Ashlyn/linux.git"
+EGIT_REPO_URI="git://github.com/Cynede/linux.git"
 
 inherit kernel-2 git-2
 detect_version
 
 K_NOSETEXTRAVERSION="don't_set_it"
 DESCRIPTION="Special Kernel Live Sources"
-HOMEPAGE="http://github.com/Ashlyn/linux"
+HOMEPAGE="http://github.com/Cynede/linux"
 KEYWORDS=""
 K_EXTRAEINFO="GNU/Linux kernel"
 

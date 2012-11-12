@@ -5,9 +5,9 @@ EAPI=4
 
 inherit cmake-utils git-2
 
-EGIT_REPO_URI="git://github.com/Ashlyn/Teenage.git"
+EGIT_REPO_URI="git://bitbucket.org/Cynede/Teenage.git"
 DESCRIPTION="Tiny scheme on sterioids"
-HOMEPAGE="http://github.com/Ashlyn/Teenage"
+HOMEPAGE="http://bitbucket.org/Cynede/Teenage"
 
 LICENSE="GPL-2 LGPL-2"
 
