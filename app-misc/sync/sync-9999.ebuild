@@ -18,7 +18,7 @@ DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	insinto "/etc/conf.d/"
-	doins "${S}/repolist.conf"
+	#insinto "/etc/conf.d/"
+	#doins "${S}/repolist.conf"
 	newbin "${S}/sync.py" "forks-sync"
 }
