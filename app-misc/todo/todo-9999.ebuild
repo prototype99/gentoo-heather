@@ -12,12 +12,15 @@ HOMEPAGE="https://bitbucket.org/Cynede/ctodo"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE=""
+IUSE="static-libs"
 
 DEPEND="sys-devel/gcc
 	dev-db/sqlite"
 RDEPEND="${DEPEND}"
 
 src_install() {
+	if use static-libs; then
+		dolib.a todo.a
+	fi
 	emake DESTDIR="${D}" install || die "Install failed"
 }
