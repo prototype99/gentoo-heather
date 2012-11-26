@@ -43,7 +43,7 @@ src_install()
 	egacinstall "${nemerlemacrosdll}" \
 		|| die "couldn't install ${nemerlemacrosdll} in the global assembly cache"
 	elog "Installing ncc"
-	dodoc README AUTHORS INSTALL NEWS ChangeLog
+	dodoc README AUTHORS INSTALL NEWS
 	into /usr
 	dobin bin/Release/mono-3.5/Stage1/ncc.exe
 }
