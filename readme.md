@@ -1,2 +1,0 @@
-Shame Gentoo Overlay
-====================
