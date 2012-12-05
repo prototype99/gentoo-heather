@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.11.4.ebuild,v 1.1 2012/10/09 15:31:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.0.1.ebuild $
 
 EAPI="4"
 
