@@ -5,6 +5,8 @@
 EAPI="4"
 inherit eutils mono user
 
+SRC="http://download.mono-project.com/sources/xsp/xsp-2.10.tar.bz2"
+
 PATCHDIR="${FILESDIR}/2.2/"
 
 DESCRIPTION="XSP is a small web server that can host ASP.NET pages"
