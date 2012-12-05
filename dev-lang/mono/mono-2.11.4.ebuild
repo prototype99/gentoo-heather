@@ -10,7 +10,7 @@ DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.mono-project.com/Main_Page"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
-SLOT="2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 
 IUSE="minimal pax_kernel xen"
