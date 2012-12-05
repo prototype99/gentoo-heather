@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.10.2-r2.ebuild,v 1.3 2012/09/22 12:32:40 blueness Exp $
 
 EAPI="4"
-inherit eutils go-mono mono user
+inherit eutils mono user
 
 PATCHDIR="${FILESDIR}/2.2/"
 
@@ -16,9 +16,7 @@ KEYWORDS="amd64 ppc ~x86"
 
 IUSE=""
 
-RDEPEND="
-dev-lang/mono
-dev-db/sqlite:3"
+RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
