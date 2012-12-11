@@ -28,7 +28,8 @@ DEPEND="${COMMONDEPEND}
 	>=app-shells/bash-3.2
 	pax_kernel? ( sys-apps/paxctl )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
+# -j1
+MAKEOPTS="${MAKEOPTS}"
 
 RESTRICT="test"
 
