@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: $
 
 EAPI=4
 
@@ -51,7 +51,8 @@ src_configure() {
 src_compile() {
 	einfo "Compiling embedded spidermonkey (${JS_P})."
 	# Based on thirdparty/build_linux.sh.
-	emake -j1 \
+	# -j1
+	emake \
 		-C "${WORKDIR}"/js/src \
 		JS_DIST="${EPREFIX}"/usr \
 		JS_THREADSAFE=1 \
