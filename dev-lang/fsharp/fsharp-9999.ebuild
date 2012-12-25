@@ -29,4 +29,5 @@ src_prepare() {
 #Compatibily for some weird stuff, Must be removed after some fixes
 pkg_postinst() {
 	dosym /usr/bin/fsharpc /usr/bin/fsc
+	chmod 666 /etc/mono/registry/last-btime
 }
