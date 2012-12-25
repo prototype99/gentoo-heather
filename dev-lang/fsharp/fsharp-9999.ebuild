@@ -22,7 +22,11 @@ RDEPEND="${DEPEND}"
 
 MAKEOPTS="-j1"
 
-src_prepare()
-{
+src_prepare() {
 	eautoreconf
+}
+
+#Compatibily for some weird stuff, Must be removed after some fixes
+pkg_postinst() {
+	dosym "/usr/bin/fsc" "/usr/bin/fsharpc"
 }
