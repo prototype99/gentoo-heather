@@ -29,16 +29,16 @@ src_prepare() {
 }
 
 src_install() {
-	dodir /usr/lib/mono/FAKE
+	#dodir /usr/lib/mono/FAKE
 	elog "Installing libraries"
-	instinto /usr/lib/mono/4.0
+	insinto /usr/lib/mono/4.0/
 	#insinto /usr/lib/mono/FAKE
-	doins build/FAKE.exe
-	doins build/FakeLib.dll
+	doins build/FAKE.exe || die
+	doins build/FakeLib.dll || die
 	#egacinstall /usr/lib/mono/FAKE/FakeLib.dll || die "failed to gac install"
 }
 
 pkg_postinst() {
-	echo "mono /usr/lib/mono/FAKE/FAKE.exe" > /usr/bin/fake
+	echo "mono /usr/lib/mono/4.0/FAKE.exe" > /usr/bin/fake
 	chmod 777 /usr/bin/fake
 }
