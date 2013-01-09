@@ -20,8 +20,12 @@ IUSE=""
 DEPEND="dev-lang/mono"
 RDEPEND="${DEPEND}"
 
-MAKEOPTS="-j1"
-
 src_install() {
-	dobin src/bin/Release/FChess.exe || die
+	insinto /usr/lib/mono/4.0
+	doins src/bin/Release/FChess.exe
+}
+
+pkg_postinst() {
+	echo "mono /usr/lib/mono/4.0/FChess.exe" > /usr/bin/fchess
+	chmod 777 /usr/bin/fchess
 }
