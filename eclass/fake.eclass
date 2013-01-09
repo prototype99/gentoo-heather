@@ -34,7 +34,7 @@ fake_src_configure() {
 # @FUNCTION: fake_src_compile
 # @DESCRIPTION: Runs fake.
 fake_src_compile() {
-	fake || die "fake failed"
+	/usr/bin/fake || die "fake failed"
 }
 
 # @FUNCTION: fake_src_install

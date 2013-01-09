@@ -31,7 +31,8 @@ src_prepare() {
 src_install() {
 	dodir /usr/lib/mono/FAKE
 	elog "Installing libraries"
-	insinto /usr/lib/mono/FAKE
+	instinto /usr/lib/mono/4.0
+	#insinto /usr/lib/mono/FAKE
 	doins build/FAKE.exe
 	doins build/FakeLib.dll
 	#egacinstall /usr/lib/mono/FAKE/FakeLib.dll || die "failed to gac install"
