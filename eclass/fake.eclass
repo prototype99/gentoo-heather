@@ -10,33 +10,19 @@
 inherit mono
 
 NO_FAKE_DEPEND=( "dev-lang/fsharp" "dev-dotnet/fake" )
-
 DEPEND="${NO_FAKE_DEPEND}"
-
-# @FUNCTION: fake_src_unpack
-# @DESCRIPTION:  Runs default()
-fake_src_unpack() {
-	if [[ "${PV%.9999}" != "${PV}" ||  "${PV}" == "9999" ]]
-	then
-		default
-		git_src_unpack
-	else
-		default
-	fi
-}
 
 # @FUNCTION: fake_src_configure
 # @DESCRIPTION: Runs nothing
 fake_src_configure() {
-	echo "configure source"
+	echo "skip configure source"
 }
 
 # @FUNCTION: fake_src_compile
 # @DESCRIPTION: Runs fake.
 fake_src_compile() {
-	#/usr/bin/fake
 	cd "${S}"
-	fake || die "fake failed"
+	fake || die "fake build failed"
 }
 
 # @FUNCTION: fake_src_install
