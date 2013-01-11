@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -12,15 +12,13 @@ DESCRIPTION="The F# Compiler"
 HOMEPAGE="https://github.com/fsharp/fsharp"
 SRC_URI=""
 
-LICENSE="Apache 2.0"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-lang/mono"
 RDEPEND="${DEPEND}"
-
-MAKEOPTS="-j1"
 
 src_prepare() {
 	eautoreconf
