@@ -14,9 +14,7 @@ DEPEND="${NO_FAKE_DEPEND}"
 
 # @FUNCTION: fake_src_configure
 # @DESCRIPTION: Runs nothing
-fake_src_configure() {
-	echo "skip configure source"
-}
+fake_src_configure() { :; }
 
 # @FUNCTION: fake_src_compile
 # @DESCRIPTION: Runs fake.
