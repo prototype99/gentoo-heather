@@ -9,7 +9,7 @@
 
 inherit mono
 
-NO_FAKE_DEPEND=( "dev-lang/fsharp" "dev-dotnet/fake" )
+NO_FAKE_DEPEND="dev-lang/fsharp dev-dotnet/fake"
 DEPEND="${NO_FAKE_DEPEND}"
 
 # @FUNCTION: fake_src_configure

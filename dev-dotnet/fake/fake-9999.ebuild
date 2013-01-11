@@ -15,7 +15,7 @@ SRC_URI=""
 
 LICENSE="MS-PL"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-lang/mono
