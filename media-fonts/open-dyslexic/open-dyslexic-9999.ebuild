@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.38.ebuild,v 1.3 2012/08/29 06:04:00 yngwin Exp $
+# $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit font git-2
 
