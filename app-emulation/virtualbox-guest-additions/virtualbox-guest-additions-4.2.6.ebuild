@@ -69,9 +69,8 @@ src_unpack() {
 src_prepare() {
 	#Fixes bug #408611
 	mkdir "${S}"/include/linux/
-	elog "Linking some headers to fix bug #408611"
-	ln -s /usr/src/linux/include/linux/compiler.h "${S}"/include/linux/compiler.h
-	ln -s /usr/src/linux/include/linux/compiler-gcc.h "${S}"/include/linux/compiler-gcc.h
+	elog "Linking headers to fix bug #408611"
+	ln -s /usr/src/linux/include/linux/* "${S}"/include/linux/
 
 	# PaX fixes (see bug #298988)
 	pushd "${WORKDIR}" &>/dev/null || die
