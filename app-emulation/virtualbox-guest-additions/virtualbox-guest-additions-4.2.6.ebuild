@@ -53,7 +53,7 @@ pkg_setup() {
 		enewuser vboxguest -1 /bin/sh /dev/null vboxguest
 
 		elog "Linking compiler.h to /usr/include/linux to fix bug #408611"
-		ln -s /usr/src/linux-3.99-linux0/include/linux/compiler.h /usr/include/linux/compiler.h
+		ln -s /usr/src/linux/include/linux/compiler.h /usr/include/linux/compiler.h
 }
 
 src_unpack() {
