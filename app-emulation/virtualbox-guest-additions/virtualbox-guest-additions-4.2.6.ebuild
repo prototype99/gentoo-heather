@@ -51,9 +51,6 @@ pkg_setup() {
 		BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 		enewgroup vboxguest
 		enewuser vboxguest -1 /bin/sh /dev/null vboxguest
-
-		elog "Linking compiler.h to /usr/include/linux to fix bug #408611"
-		ln -s /usr/src/linux/include/linux/compiler.h /usr/include/linux/compiler.h
 }
 
 src_unpack() {
@@ -70,6 +67,12 @@ src_unpack() {
 }
 
 src_prepare() {
+	#Fixes bug #408611
+	mkdir "${S}"/include/linux/
+	elog "Linking some headers to fix bug #408611"
+	ln -s /usr/src/linux/include/linux/compiler.h "${S}"/include/linux/compiler.h
+	ln -s /usr/src/linux/include/linux/compiler-gcc.h "${S}"/include/linux/compiler-gcc.h
+
 	# PaX fixes (see bug #298988)
 	pushd "${WORKDIR}" &>/dev/null || die
 	epatch "${FILESDIR}"/vboxguest-4.1.0-log-use-c99.patch
