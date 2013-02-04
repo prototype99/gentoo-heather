@@ -10,7 +10,7 @@ JS_P=js-1.8.0-rc1
 
 DESCRIPTION="A modern and featureful DVCS (distributed version control system)"
 HOMEPAGE="http://veracity-scm.com/"
-SRC_URI="http://download.sourcegear.com/Veracity/release/2.0.0.10822/veracity-source-2.0.0.10822.tar.gz
+SRC_URI="http://download.sourcegear.com/Veracity/release/${PV}/veracity-source-${PV}.tar.gz
 ftp://ftp.mozilla.org/pub/mozilla.org/js/${JS_P}.tar.gz
 http://ftp.mozilla.org/pub/mozilla.org/js/${JS_P}.tar.gz"
 
