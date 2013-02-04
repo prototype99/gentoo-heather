@@ -16,7 +16,7 @@ http://ftp.mozilla.org/pub/mozilla.org/js/${JS_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE="test"
 
 S=${WORKDIR}/${PN}
