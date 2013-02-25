@@ -48,8 +48,6 @@ src_configure() {
 
 src_compile() {
 	einfo "Compiling embedded spidermonkey (${JS_P})."
-	# Based on thirdparty/build_linux.sh.
-	# -j1
 	emake \
 		-C "${WORKDIR}"/js/src \
 		JS_DIST="${EPREFIX}"/usr \
