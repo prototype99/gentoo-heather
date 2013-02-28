@@ -3,24 +3,21 @@
 # $Header: $
 
 EAPI=5
-inherit mercurial
+inherit git-2
 
 DESCRIPTION="AWESOME TODO LIST"
-EHG_REPO_URI="https://bitbucket.org/Cynede/ctodo"
-HOMEPAGE="https://bitbucket.org/Cynede/ctodo"
+EGIT_REPO_URI="git://github.com/Cynede/ctodo.git"
+HOMEPAGE="https://github.com/Cynede/ctodo"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="static-libs"
+IUSE=""
 
 DEPEND="sys-devel/gcc
 	dev-db/sqlite"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	if use static-libs; then
-		dolib.a todo.a
-	fi
 	emake DESTDIR="${D}" install || die "Install failed"
 }

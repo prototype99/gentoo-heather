@@ -3,11 +3,11 @@
 # $Header: $
 
 EAPI=5
-inherit mercurial
+inherit git-2
 
 DESCRIPTION="AWESOME TODO LIST"
-EHG_REPO_URI="https://bitbucket.org/Cynede/Sync"
-HOMEPAGE="https://bitbucket.org/Cynede/Sync"
+EGIT_REPO_URI="git://github.com/Cynede/sync.git"
+HOMEPAGE="https://github.com/Cynede/sync"
 
 LICENSE="GPL-3"
 SLOT="0"
