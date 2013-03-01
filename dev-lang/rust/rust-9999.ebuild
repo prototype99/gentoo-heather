@@ -18,3 +18,7 @@ DEPEND="
 	>=dev-lang/python-2.6
 	>=dev-lang/perl-5.0"
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	./configure
+}
