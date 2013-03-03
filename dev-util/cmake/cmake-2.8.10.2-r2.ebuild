@@ -25,7 +25,7 @@ DEPEND="
 	ncurses? ( sys-libs/ncurses )
 	qt4? (
 		dev-qt/qtcore:4
-		x11-libs/qtgui:4
+		dev-qt/qtgui:4
 	)
 "
 RDEPEND="${DEPEND}
