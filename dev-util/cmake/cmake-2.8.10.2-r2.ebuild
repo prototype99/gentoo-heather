@@ -24,7 +24,7 @@ DEPEND="
 	virtual/pkgconfig
 	ncurses? ( sys-libs/ncurses )
 	qt4? (
-		x11-libs/qtcore:4
+		dev-qt/qtcore:4
 		x11-libs/qtgui:4
 	)
 "
