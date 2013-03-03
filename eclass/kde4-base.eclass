@@ -197,7 +197,7 @@ QT_MINIMAL="${QT_MINIMAL:-4.8.0}"
 
 # Declarative dependencies
 qtdeclarativedepend="
-	>=x11-libs/qt-declarative-${QT_MINIMAL}:4
+	>=dev-qt/qtdeclarative-${QT_MINIMAL}:4
 "
 case ${DECLARATIVE_REQUIRED} in
 	always)
@@ -213,7 +213,7 @@ unset qtdeclarativedepend
 
 # QtHelp dependencies
 qthelpdepend="
-	>=x11-libs/qt-assistant-${QT_MINIMAL}:4
+	>=dev-qt/qtassistant-${QT_MINIMAL}:4
 "
 case ${QTHELP_REQUIRED} in
 	always)
@@ -228,7 +228,7 @@ unset qthelpdepend
 
 # OpenGL dependencies
 qtopengldepend="
-	>=x11-libs/qt-opengl-${QT_MINIMAL}:4
+	>=dev-qt/qtopengl-${QT_MINIMAL}:4
 "
 case ${OPENGL_REQUIRED} in
 	always)
@@ -244,7 +244,7 @@ unset qtopengldepend
 
 # MultiMedia dependencies
 qtmultimediadepend="
-	>=x11-libs/qt-multimedia-${QT_MINIMAL}:4
+	>=dev-qt/qtmultimedia-${QT_MINIMAL}:4
 "
 case ${MULTIMEDIA_REQUIRED} in
 	always)
