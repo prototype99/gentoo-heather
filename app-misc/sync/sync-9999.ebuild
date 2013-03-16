@@ -6,8 +6,8 @@ EAPI=5
 inherit git-2
 
 DESCRIPTION="AWESOME TODO LIST"
-EGIT_REPO_URI="git://github.com/Cynede/sync.git"
-HOMEPAGE="https://github.com/Cynede/sync"
+EGIT_REPO_URI="git://github.com/Heather/sync.git"
+HOMEPAGE="https://github.com/Heather/sync"
 
 LICENSE="GPL-3"
 SLOT="0"

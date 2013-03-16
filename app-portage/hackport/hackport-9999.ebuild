@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="bin test-suite"
 
 #point hackport to use own fork
-EGIT_REPO_URI="git://github.com/Cynede/hackport.git"
+EGIT_REPO_URI="git://github.com/Heather/hackport.git"
 EGIT_HAS_SUBMODULES="true"
 
 inherit git-2 haskell-cabal

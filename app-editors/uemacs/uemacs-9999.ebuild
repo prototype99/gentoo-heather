@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-EGIT_REPO_URI="git://github.com/Cynede/uemacs.git"
+EGIT_REPO_URI="git://github.com/Heather/uemacs.git"
 
 inherit git-2 toolchain-funcs
 

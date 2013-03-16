@@ -6,8 +6,8 @@ EAPI=5
 inherit git-2
 
 DESCRIPTION="AWESOME TODO LIST"
-EGIT_REPO_URI="git://github.com/Cynede/ctodo.git"
-HOMEPAGE="https://github.com/Cynede/ctodo"
+EGIT_REPO_URI="git://github.com/Heather/ctodo.git"
+HOMEPAGE="https://github.com/Heather/ctodo"
 
 LICENSE="GPL-3"
 SLOT="0"

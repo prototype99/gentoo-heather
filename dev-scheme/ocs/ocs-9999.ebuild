@@ -7,8 +7,8 @@ EAPI=5
 inherit git-2
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
-EGIT_REPO_URI="git://bitbucket.org/Cynede/ocs.git"
-HOMEPAGE="http://bitbucket.org/Cynede/ocs"
+EGIT_REPO_URI="git://bitbucket.org/Heather/ocs.git"
+HOMEPAGE="http://bitbucket.org/Heather/ocs"
 
 LICENSE="BSD"
 SLOT="0"
