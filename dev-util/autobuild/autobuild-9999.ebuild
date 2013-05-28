@@ -8,7 +8,11 @@ EHG_REPO_URI="https://bitbucket.org/lindenlab/autobuild"
 
 PYTHON_MULTIPLE_ABIS="true"
 SUPPORT_PYTHON_ABIS="true"
-inherit mercurial multilib python
+
+# Python 2.6+ and compliant implementations.
+PYTHON_COMPAT=( python{2_6,2_7} pypy{1_9,2_0} )
+
+inherit mercurial multilib python-r1
 
 DESCRIPTION="Linden autobuild"
 HOMEPAGE="http://hg.secondlife.com/autobuild"
