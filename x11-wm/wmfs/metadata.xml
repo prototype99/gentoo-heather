@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>heather@cynede.net</email>
+  </maintainer>
+  <longdescription lang="en">
+    WMFS2 (Window Manager From Scratch)
+  </longdescription>
+    <use>
+      <flag name='xrandr'>XRandr</flag>
+      <flag name='imlib2'>use imlib2</flag>
+    </use>
+</pkgmetadata>
