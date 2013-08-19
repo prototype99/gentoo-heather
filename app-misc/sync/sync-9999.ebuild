@@ -18,5 +18,5 @@ DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	newbin "${S}/sync.py" "forks-sync"
+	newbin "${S}/__main__.py" "forks-sync"
 }
