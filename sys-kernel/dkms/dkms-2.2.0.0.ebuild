@@ -1,6 +1,8 @@
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header:  $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils bash-completion
 
@@ -10,13 +12,9 @@ HOMEPAGE="http://linux.dell.com/dkms"
 LICENSE="GPL-2"
 DEPEND=""
 RDEPEND="app-arch/rpm"
-KEYWORDS="*"
+KEYWORDS="~x86 ~amd64"
 SLOT="0"
 
 src_compile() {
-	return
-}
-
-src_install() {
-	make DESTDIR="$D" install
+	:
 }
