@@ -7,11 +7,11 @@ inherit eutils
 
 DESCRIPTION="emerge -C"
 HOMEPAGE="https://github.com/Heather"
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 KEYWORDS="*"
 SLOT="0"
 S=$WORKDIR
 
 src_install() {
-	make_wrapper unmerge "emerge -C \"\$@\""
+	make_wrapper unmerge  'emerge -C "$@"'
 }
