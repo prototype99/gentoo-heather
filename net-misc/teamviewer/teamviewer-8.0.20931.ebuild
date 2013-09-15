@@ -68,8 +68,8 @@ EOF
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-POSIX.patch \
-		"${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-8.0.17147-POSIX.patch \
+		"${FILESDIR}"/${PN}-8.0.17147-gentoo.patch
 
 	sed \
 		-e "s/@TVV@/${MV}/g" \
