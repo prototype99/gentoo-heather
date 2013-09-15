@@ -16,7 +16,7 @@ SRC_URI="http://www.teamviewer.com/download/version_${MV}x/teamviewer_linux.deb 
 LICENSE="TeamViewer !system-wine? ( LGPL-2.1 )"
 SLOT=${MV}
 KEYWORDS="~amd64 ~x86"
-IUSE="system-wine"
+IUSE="-system-wine"
 
 RESTRICT="mirror"
 
@@ -68,8 +68,9 @@ EOF
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-8.0.17147-POSIX.patch \
-		"${FILESDIR}"/${PN}-8.0.17147-gentoo.patch
+	#FIXME
+	#epatch "${FILESDIR}"/${PN}-8.0.17147-POSIX.patch \
+	#	"${FILESDIR}"/${PN}-8.0.17147-gentoo.patch
 
 	sed \
 		-e "s/@TVV@/${MV}/g" \
@@ -86,7 +87,7 @@ src_install () {
 		insinto /opt/${MY_PN}/script
 		doins script/*.reg
 		exeinto /opt/${MY_PN}/script
-		doexe script/teamviewer{,_desktop} script/tvw_{aux,config,main,profile}
+		doexe script/teamviewer{,_desktop} script/tvw_{aux,config,main,profile,daemon}
 
 		# install internal wine
 		insinto /opt/${MY_PN}
@@ -119,7 +120,9 @@ src_install () {
 	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
-	dodoc ../linux_FAQ_{EN,DE}.txt
+
+	#NODOCS...
+	#dodoc ../linux_FAQ_{EN,DE}.txt
 	make_desktop_entry ${MY_PN} TeamViewer ${MY_PN}
 }
 
