@@ -32,19 +32,19 @@ S="${WORKDIR}"
 src_install() {
 	dodir /usr/share/trillian
 	insinto /usr/share/trillian
-	doins "${S}"/usr/share/trillian/*
+	doins -r "${S}"/usr/share/trillian/*
 	dodir /usr/share/applications
 	insinto /usr/share/applications
-	doins "${S}"/usr/share/applications/*
+	doins -r "${S}"/usr/share/applications/*
 	dodir /usr/share/icons/hicolor/scalable/apps
 	insinto /usr/share/icons/hicolor/scalable/apps
-	doins "${S}"/usr/share/icons/hicolor/scalable/apps/*
+	doins -r "${S}"/usr/share/icons/hicolor/scalable/apps/*
 	dodir /usr/share/indicators/messages/applications
 	insinto /usr/share/indicators/messages/applications
-	doins "${S}"/usr/share/indicators/messages/applications/*
+	doins -r "${S}"/usr/share/indicators/messages/applications/*
 	dodir /usr/share/menu
 	insinto /usr/share/menu
-	doins "${S}"/usr/share/menu/*
+	doins -r "${S}"/usr/share/menu/*
 	dobin "${S}"/usr/bin/trillian
 }
 
