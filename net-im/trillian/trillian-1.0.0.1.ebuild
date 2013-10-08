@@ -24,7 +24,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
-	dev-libs/libzip"
+	>=dev-libs/libzip-0.1
+	>=dev-cpp/glibmm-2.4"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
