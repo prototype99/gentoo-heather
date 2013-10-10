@@ -26,8 +26,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-	#FIXME 64 bit version
-	dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1"
-	dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1.1.0"
+	if [[ "${ARCH}" == "x86" ]] ; then
+		dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1"
+		dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1.1.0"
+	else
+		dolib "${S}/usr/lib/x86_64-linux-gnu/libatkmm-1.6.so.1"
+		dolib "${S}/usr/lib/x86_64-linux-gnu/libatkmm-1.6.so.1.1.0"
+	fi
 }
 
