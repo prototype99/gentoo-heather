@@ -30,6 +30,7 @@ RDEPEND="x11-libs/gtk+
 	>=dev-libs/libgtkmm-3.0.1
 	>=dev-libs/libcairomm-1.0
 	>=dev-libs/libatkmm-1.6
+	>=dev-libs/libpangomm-1.4
 
 	dev-libs/libmessaging-menu
 
