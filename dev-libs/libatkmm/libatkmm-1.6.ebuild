@@ -5,9 +5,9 @@
 EAPI="5"
 inherit unpacker
 
-SRC_URI_BASE="http://ubuntu.mirror.cambrium.nl/ubuntu//pool/main/c/cairomm/libcairomm-1.0-1_1.8.0-1build2"
+SRC_URI_BASE="http://ubuntu.mirror.cambrium.nl/ubuntu//pool/main/a/atkmm1.6/libatkmm-1.6-1_2.22.6-1ubuntu1"
 
-DESCRIPTION="libcairomm"
+DESCRIPTION="libatkmm"
 HOMEPAGE=""
 SRC_URI="	x86? ( ${SRC_URI_BASE}_i386.deb -> ${P}_x86.deb )
 		amd64? ( ${SRC_URI_BASE}_amd64.deb -> ${P}_amd64.deb )"
@@ -20,13 +20,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libpng-1.2"
+RDEPEND=">=dev-libs/glib-2.16"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
 src_install() {
-	dolib "${S}/usr/lib/libcairomm-1.0.so.1"
-	dolib "${S}/usr/lib/libcairomm-1.0.so.1.3.0"
+	dolib "${S}/usr/lib/libatkmm-1.6.so.1"
+	dolib "${S}/usr/lib/libatkmm-1.6.so.1.1.0"
 }
 
