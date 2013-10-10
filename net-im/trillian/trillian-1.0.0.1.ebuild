@@ -32,9 +32,14 @@ RDEPEND="x11-libs/gtk+
 	>=dev-libs/libatkmm-1.6
 	>=dev-libs/libpangomm-1.4
 
+	media-libs/libpng:1.2
+
 	dev-libs/libmessaging-menu
 
 	>=dev-cpp/glibmm-2.4"
+
+#emul: =app-emulation/emul-linux-x86-baselibs-20130224
+
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
