@@ -17,8 +17,7 @@
 # Example: package-3.6.0_p0_p0101 (0ubuntu1.1) to package-3.6.0_p0_p02 (0ubuntu2)
 # If this occurs, the ebuild should be named package-3.6.0a_p0_p02
 
-
-EXPORT_FUNCTIONS pkg_pretend
+#EXPORT_FUNCTIONS pkg_pretend
 
 export DISTUTILS_NO_PARALLEL_BUILD=1	# Set this to catch future parallel build problems with distutils-r1.eclass
 					#	parallel builds give us no real benefit for the tiny python packages
@@ -57,10 +56,10 @@ PVR_PL_MINOR="${PVR_PL_MINOR// /.}"
 UVER="${PVR_PL_MAJOR}ubuntu${PVR_PL_MINOR}"
 
 ## Check we have the correct masking in place for the overlay to work ##
-ubuntu-versionator_pkg_pretend() {
-	readlink /etc/portage/package.mask/unity-portage.pmask &> /dev/null || \
-		die "Please create symlink 'ln -s /var/lib/layman/unity-gentoo/unity-portage.pmask /etc/portage/package.mask/unity-portage.pmask'"
-
-	grep -R '\*/\*::unity-gentoo' /etc/portage/package.keywords* &> /dev/null || \
-		die "Please place '*/*::unity-gentoo' in your package.keywords file"
-}
+#ubuntu-versionator_pkg_pretend() {
+#	readlink /etc/portage/package.mask/unity-portage.pmask &> /dev/null || \
+#		die "Please create symlink 'ln -s /var/lib/layman/unity-gentoo/unity-portage.pmask /etc/portage/package.mask/unity-portage.pmask'"
+#
+#	grep -R '\*/\*::unity-gentoo' /etc/portage/package.keywords* &> /dev/null || \
+#		die "Please place '*/*::unity-gentoo' in your package.keywords file"
+#}
