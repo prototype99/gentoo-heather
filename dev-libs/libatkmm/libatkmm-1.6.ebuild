@@ -26,7 +26,8 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-	dolib "${S}/usr/lib/libatkmm-1.6.so.1"
-	dolib "${S}/usr/lib/libatkmm-1.6.so.1.1.0"
+	#FIXME 64 bit version
+	dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1"
+	dolib "${S}/usr/lib/i386-linux-gnu/libatkmm-1.6.so.1.1.0"
 }
 
