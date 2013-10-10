@@ -27,6 +27,8 @@ RDEPEND="x11-libs/gtk+
 	>=dev-libs/libzip-0.10
 	>=dev-libs/libunity-7
 
+	>=dev-libs/libgtkmm-3.0.1
+
 	dev-libs/libmessaging-menu
 
 	>=dev-cpp/glibmm-2.4"
