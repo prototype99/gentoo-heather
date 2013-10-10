@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
-EGIT_REPO_URI="git://github.com/Cynede/uemacs.git"
+EAPI="5"
+EGIT_REPO_URI="https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/uemacs"
 
 inherit git-2 toolchain-funcs
 
