@@ -9,7 +9,7 @@ SRC_URI_BASE="https://www.trillian.im/get/linux/beta/?deb=1"
 
 DESCRIPTION="Trillian is modern instant messaging for home and work that prioritizes chat interoperability and security."
 HOMEPAGE="https://www.trillian.im"
-SRC_URI="${SRC_URI_BASE} -> trillian-for-linux-v1.0.0.1-amd64.deb"
+SRC_URI="${SRC_URI_BASE} -> ${P}.deb"
 
 #TODO:
 #"x86? ( ${SRC_URI_BASE}&arch=i386&revision=${REV} -> ${P}_x86.deb )
@@ -25,6 +25,7 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+
 	>=dev-libs/libzip-0.10
+	>=dev-libs/libunity-7
 	>=dev-cpp/glibmm-2.4"
 DEPEND="${RDEPEND}"
 
