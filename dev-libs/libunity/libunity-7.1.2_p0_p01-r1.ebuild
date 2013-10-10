@@ -25,7 +25,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror"
 
-RDEPEND="dev-libs/dee:=
+RDEPEND=">=dev-libs/dee-1.2.5
 	dev-libs/libdbusmenu:="
 DEPEND="${RDEPEND}
 	dev-libs/libgee:0
