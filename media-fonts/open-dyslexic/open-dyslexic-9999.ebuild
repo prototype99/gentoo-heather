@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI="5"
 
 inherit font git-2
 
@@ -20,7 +20,7 @@ RDEPEND=""
 
 FONT_SUFFIX="ttf"
 S="${WORKDIR}"
-FONT_S="${S}"
+FONT_S="${S}/ttf"
 
 FONTDIR=/usr/share/fonts/open-dyslexis
 
