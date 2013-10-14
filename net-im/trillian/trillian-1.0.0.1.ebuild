@@ -45,21 +45,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_install() {
-	dodir /usr/share/trillian
-	insinto /usr/share/trillian
-	doins -r "${S}"/usr/share/trillian/*
-	dodir /usr/share/applications
-	insinto /usr/share/applications
-	doins -r "${S}"/usr/share/applications/*
-	dodir /usr/share/icons/hicolor/scalable/apps
-	insinto /usr/share/icons/hicolor/scalable/apps
-	doins -r "${S}"/usr/share/icons/hicolor/scalable/apps/*
-	dodir /usr/share/indicators/messages/applications
-	insinto /usr/share/indicators/messages/applications
-	doins -r "${S}"/usr/share/indicators/messages/applications/*
-	dodir /usr/share/menu
-	insinto /usr/share/menu
-	doins -r "${S}"/usr/share/menu/*
+	insinto /usr/share
+	doins -r "${S}"/usr/share/*
 	dobin "${S}"/usr/bin/trillian
 }
-
