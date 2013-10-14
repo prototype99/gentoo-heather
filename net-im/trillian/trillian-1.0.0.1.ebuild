@@ -47,5 +47,9 @@ S="${WORKDIR}"
 src_install() {
 	insinto /usr/share
 	doins -r "${S}"/usr/share/*
-	dobin "${S}"/usr/bin/trillian
+	dosym /usr/share/trillian/trillian /usr/bin/trillian
+}
+
+pkg_postinst() {
+	chmod 777 /usr/bin/trillian || die
 }
