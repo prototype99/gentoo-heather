@@ -27,12 +27,10 @@ RDEPEND="x11-libs/gtk+
 	>=dev-libs/libzip-0.10
 	>=dev-libs/libunity-7
 
-	>=dev-libs/libgtkmm-3.0.1
-
+	>=dev-cpp/gtkmm-3.0.1
 	>=dev-cpp/cairomm-1.0
 	>=dev-cpp/atkmm-1.6
-
-	>=dev-libs/libpangomm-1.4
+	>=dev-cpp/pangomm-1.4
 
 	media-libs/libpng:1.2
 
