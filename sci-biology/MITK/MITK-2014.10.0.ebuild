@@ -28,3 +28,11 @@ RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
 
+src_install() {
+	dodir /usr/share/MITK
+	insinto /usr/share/MITK
+	doins -r "${BUILD_DIR}"/MITK-build/bin/*
+	dosym /usr/share/MITK/usResourceCompiler /usr/bin/usResourceCompiler
+	dosym /usr/share/MITK/MitkWorkbench /usr/bin/MitkWorkbench
+	dosym /usr/share/MITK/MitkPluginGenerator /usr/bin/MitkPluginGenerator
+}
