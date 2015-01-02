@@ -17,7 +17,9 @@ IUSE=""
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtwebkit:4
-	dev-qt/qttest:4"
+	dev-qt/qttest:4
+	dev-qt/designer:4
+	dev-qt/linguist:4"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
