@@ -19,7 +19,8 @@ DEPEND="dev-qt/qtcore:4
 	dev-qt/qtwebkit:4
 	dev-qt/qttest:4
 	dev-qt/designer:4
-	dev-qt/linguist:4"
+	dev-qt/linguist:4
+	dev-qt/qtsql:4"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
