@@ -3,15 +3,15 @@
 # $Header: $
 
 EAPI=5
-inherit git-2 cmake-utils
+inherit cmake-utils
 
 DESCRIPTION="The Medical Imaging Interaction Toolkit."
-EGIT_REPO_URI="git://github.com/MITK/MITK.git"
+SRC_URI="http://github.com/MITK/${PN}/archive/v${PV}.tar.gz"
 HOMEPAGE="http://www.mitk.org/wiki"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-qt/qtcore:4
@@ -22,10 +22,3 @@ RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
 
-src_compile() {
-	cmake-utils_src_compile -j1 #nowarn
-}
-
-src_install() {
-	cmake-utils_src_install -j1 #nowarn
-}
