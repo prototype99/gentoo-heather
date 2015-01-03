@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mitk.org/wiki"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="dev-qt/qtcore:5
