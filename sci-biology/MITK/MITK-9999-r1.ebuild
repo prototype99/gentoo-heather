@@ -14,16 +14,16 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwebkit:5
-	dev-qt/qttest:5
-	dev-qt/designer:5
-	dev-qt/linguist:5
-	dev-qt/qtsql:5
-	dev-qt/qtsvg:5
-	dev-qt/qthelp:5
-	dev-qt/qtopengl:5"
+DEPEND="dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qtwebkit
+	dev-qt/qttest
+	dev-qt/designer
+	dev-qt/linguist
+	dev-qt/qtsql
+	dev-qt/qtsvg
+	dev-qt/qthelp
+	dev-qt/qtopengl"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
