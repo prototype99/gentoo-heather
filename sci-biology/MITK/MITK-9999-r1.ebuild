@@ -32,5 +32,7 @@ src_install() {
 	dodir /usr/share/MITK
 	insinto /usr/share/MITK
 	doins -r "${BUILD_DIR}"/*
-	make_wrapper MITK "cd /usr/share/MITK/MITK-build/bin && ./MitkWorkbench"
+	#TODO: make some tricks to run it success
+	chmod a+x /usr/share/MITK/MITK-build/bin/MitkWorkbench
+	make_wrapper MITK "/usr/share/MITK/MITK-build/bin/MitkWorkbench"
 }
