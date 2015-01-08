@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="The Medical Imaging Interaction Toolkit."
 SRC_URI="http://github.com/MITK/${PN}/archive/v${PV}.tar.gz"
@@ -31,14 +31,6 @@ CMAKE_MIN_VERSION=2.8.9
 src_install() {
 	dodir /usr/share/MITK
 	insinto /usr/share/MITK
-	doins -r "${BUILD_DIR}"/MITK-build/*
-	dosym /usr/share/MITK/bin/usResourceCompiler /usr/bin/usResourceCompiler
-	dosym /usr/share/MITK/bin/MitkWorkbench /usr/bin/MitkWorkbench
-	dosym /usr/share/MITK/bin/MitkPluginGenerator /usr/bin/MitkPluginGenerator
-}
-
-pkg_postinst() {
-	chmod 777 /usr/bin/usResourceCompiler || die
-	chmod 777 /usr/bin/MitkWorkbench || die
-	chmod 777 /usr/bin/MitkPluginGenerator || die
+	doins -r "${BUILD_DIR}"/*
+	make_wrapper MITK "cd /usr/share/MITK/MITK-build/bin && ./MitkWorkbench"
 }
