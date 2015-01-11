@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-qt/qtcore:4
-	dev-qt/qtgui:4
+	dev-qt/qtgui:4[-egl]
 	dev-qt/qtwebkit:4
 	dev-qt/qttest:4
 	dev-qt/designer:4
@@ -23,7 +23,7 @@ DEPEND="dev-qt/qtcore:4
 	dev-qt/qtsql:4
 	dev-qt/qtsvg:4
 	dev-qt/qthelp:4
-	dev-qt/qtopengl:4"
+	dev-qt/qtopengl:4[-egl]"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
