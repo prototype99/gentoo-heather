@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="+boost"
 
-DEPEND="boost? (dev-libs/boost)
+DEPEND="boost? ( dev-libs/boost )
 	dev-qt/qtcore
 	dev-qt/qtgui[-egl]
 	dev-qt/qtwebkit
