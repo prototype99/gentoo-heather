@@ -12,9 +12,10 @@ HOMEPAGE="http://www.mitk.org/wiki"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+boost"
 
-DEPEND="dev-qt/qtcore
+DEPEND="boost ? (dev-libs/boost)
+	dev-qt/qtcore
 	dev-qt/qtgui[-egl]
 	dev-qt/qtwebkit
 	dev-qt/qttest
@@ -23,16 +24,17 @@ DEPEND="dev-qt/qtcore
 	dev-qt/qtsql
 	dev-qt/qtsvg
 	dev-qt/qthelp
-	dev-qt/qtopengl[-egl]"
+	dev-qt/qtopengl[-egl]
+	sci-libs/vtk[boost?]
+	sci-libs/itk"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
 
-src_install() {
-	dodir /usr/share/MITK
-	insinto /usr/share/MITK
-	doins -r "${BUILD_DIR}"/*
-	#TODO: make some tricks to run it success
-	chmod a+x /usr/share/MITK/MITK-build/bin/MitkWorkbench
-	make_wrapper MITK "/usr/share/MITK/MITK-build/bin/MitkWorkbench"
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_build boost MITK_USE_BOOST)
+	)
+	cmake-utils_configure
 }
+
