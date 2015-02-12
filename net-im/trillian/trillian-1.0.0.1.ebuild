@@ -7,7 +7,7 @@ inherit unpacker
 
 SRC_URI_BASE="https://www.trillian.im/get/linux/beta/?deb=1"
 
-DESCRIPTION="Trillian is modern instant messaging for home and work that prioritizes chat interoperability and security."
+DESCRIPTION="Modern instant messaging for home and work that prioritizes chat interoperability and security"
 HOMEPAGE="https://www.trillian.im"
 SRC_URI="${SRC_URI_BASE} -> ${P}.deb"
 
