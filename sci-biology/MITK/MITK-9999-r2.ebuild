@@ -38,4 +38,3 @@ src_configure() {
 	)
 	cmake-utils_configure
 }
-

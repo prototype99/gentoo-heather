@@ -24,9 +24,7 @@ DEPEND="boost? ( dev-libs/boost )
 	dev-qt/qtsql:4
 	dev-qt/qtsvg:4
 	dev-qt/qthelp:4
-	dev-qt/qtopengl:4[-egl]
-	sci-libs/vtk[boost?]
-	sci-libs/itk"
+	dev-qt/qtopengl:4[-egl]"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
@@ -39,3 +37,6 @@ src_configure() {
 	cmake-utils_configure
 }
 
+src_install() {
+	die
+}
