@@ -29,6 +29,14 @@ RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
 
-src_configure() { :; }
-src_compile() { :; }
-src_install() { :; }
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_build boost MITK_USE_BOOST)
+		$(cmake-utils_use_build boost MITK_USE_SYSTEM_Boost)
+	)
+	cmake-utils_configure
+}
+
+src_install() {
+	die
+}
