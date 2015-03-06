@@ -15,20 +15,29 @@ KEYWORDS=""
 IUSE="+boost"
 
 DEPEND="boost? ( dev-libs/boost )
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4[-egl]
-	dev-qt/qtwebkit:4
-	dev-qt/qttest:4
-	dev-qt/designer:4
-	dev-qt/linguist:4
-	dev-qt/qtsql:4
-	dev-qt/qtsvg:4
-	dev-qt/qthelp:4
-	dev-qt/qtopengl:4[-egl]"
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5[-egl]
+	dev-qt/qtwebkit:5
+	dev-qt/qttest:5
+	dev-qt/designer:5
+	dev-qt/linguist:5
+	dev-qt/qtsql:5
+	dev-qt/qtsvg:5
+	dev-qt/qthelp:5
+	dev-qt/qtxmlpatterns:5
+	dev-qt/qtopengl:5" # [-egl]"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=2.8.9
 
-src_configure() { :; }
-src_compile() { :; }
-src_install() { :; }
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_build boost MITK_USE_BOOST)
+		$(cmake-utils_use_build boost MITK_USE_SYSTEM_Boost)
+	)
+	cmake-utils_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+}
