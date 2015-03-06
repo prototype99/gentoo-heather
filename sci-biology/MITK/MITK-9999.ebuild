@@ -35,7 +35,11 @@ src_configure() {
 		$(cmake-utils_use_build boost MITK_USE_BOOST)
 		$(cmake-utils_use_build boost MITK_USE_SYSTEM_Boost)
 	)
-	cmake-utils_configure
+	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
 }
 
 src_install() {
