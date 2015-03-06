@@ -28,7 +28,7 @@ DEPEND="boost? ( dev-libs/boost )
 	dev-qt/qtopengl:5" # [-egl]"
 RDEPEND="${DEPEND}"
 
-CMAKE_MIN_VERSION=2.8.9
+CMAKE_MIN_VERSION=3.1
 
 src_configure() {
 	local mycmakeargs=(
