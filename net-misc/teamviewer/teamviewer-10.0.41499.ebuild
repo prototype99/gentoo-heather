@@ -54,7 +54,7 @@ RDEPEND="
 
 QA_PREBUILT="opt/teamviewer${MV}/*"
 
-S=${WORKDIR}/opt/teamviewer${MV}/tv_bin
+S=${WORKDIR}/opt/teamviewer/tv_bin
 
 make_winewrapper() {
 	cat << EOF > "${T}/${MY_PN}"
