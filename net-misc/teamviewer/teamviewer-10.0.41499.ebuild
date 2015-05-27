@@ -13,44 +13,17 @@ DESCRIPTION="All-In-One Solution for Remote Access and Support over the Internet
 HOMEPAGE="http://www.teamviewer.com"
 SRC_URI="http://www.teamviewer.com/download/version_${MV}x/teamviewer_linux.deb -> ${P}.deb"
 
-LICENSE="TeamViewer !system-wine? ( LGPL-2.1 )"
+LICENSE="TeamViewer ( LGPL-2.1 )"
 SLOT=${MV}
 KEYWORDS="~amd64 ~x86"
-IUSE="-system-wine"
+IUSE="-"
 
 RESTRICT="mirror"
 
 RDEPEND="
 	x11-misc/xdg-utils
-	!system-wine? (
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs
-			app-emulation/emul-linux-x86-soundlibs
-			|| (
-				(
-					x11-libs/libSM[abi_x86_32]
-					x11-libs/libX11[abi_x86_32]
-					x11-libs/libXau[abi_x86_32]
-					x11-libs/libXdamage[abi_x86_32]
-					x11-libs/libXext[abi_x86_32]
-					x11-libs/libXfixes[abi_x86_32]
-					x11-libs/libXtst[abi_x86_32]
-				)
-				app-emulation/emul-linux-x86-xlibs
-			)
-		)
-		x86? (
-			sys-libs/zlib
-			x11-libs/libSM
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdamage
-			x11-libs/libXext
-			x11-libs/libXfixes
-			x11-libs/libXtst
-		)
-	)
-	system-wine? ( app-emulation/wine )"
+	app-emulation/wine
+"
 
 QA_PREBUILT="opt/teamviewer${MV}/*"
 
@@ -78,27 +51,9 @@ src_prepare() {
 }
 
 src_install () {
-	if use system-wine ; then
-		make_winewrapper
-		exeinto /opt/${MY_PN}
-		doexe wine/drive_c/TeamViewer/*
-	else
-		# install scripts and .reg
-		insinto /opt/${MY_PN}/script
-		doins script/*.reg
-		exeinto /opt/${MY_PN}/script
-		doexe script/teamviewer{,_desktop} script/tvw_{aux,config,main,profile,daemon}
-
-		# install internal wine
-		insinto /opt/${MY_PN}
-		doins -r wine
-		dosym /opt/${MY_PN}/script/${PN} /opt/bin/${MY_PN}
-
-		# fix permissions
-		fperms 755 /opt/${MY_PN}/wine/bin/wine{,-preloader,server}
-		fperms 755 /opt/${MY_PN}/wine/drive_c/TeamViewer/TeamViewer{,_Desktop}.exe
-		find "${D}"/opt/${MY_PN} -type f -name "*.so*" -execdir chmod 755 '{}' \;
-	fi
+	make_winewrapper
+	exeinto /opt/${MY_PN}
+	doexe wine/drive_c/TeamViewer/*
 
 	# necessary symlinks
 	dosym ./script/teamviewer /opt/${MY_PN}/TeamViewer
@@ -132,14 +87,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-
-	if use system-wine ; then
-		echo
-		eerror "IMPORTANT NOTICE!"
-		elog "Using ${PN} with system wine is not supported and experimental."
-		elog "Do not report gentoo bugs while using this version."
-		echo
-	fi
 
 	eerror "STARTUP NOTICE:"
 	elog "You cannot start the daemon via \"teamviewer --daemon start\"."
