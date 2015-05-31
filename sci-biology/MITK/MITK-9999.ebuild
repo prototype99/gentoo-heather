@@ -16,7 +16,7 @@ IUSE="+boost"
 
 DEPEND="boost? ( dev-libs/boost )
 	dev-qt/qtcore:5
-	dev-qt/qtgui:5[-egl]
+	dev-qt/qtgui:5
 	dev-qt/qtwebkit:5
 	dev-qt/qttest:5
 	dev-qt/designer:5
@@ -25,7 +25,7 @@ DEPEND="boost? ( dev-libs/boost )
 	dev-qt/qtsvg:5
 	dev-qt/qthelp:5
 	dev-qt/qtxmlpatterns:5
-	dev-qt/qtopengl:5" # [-egl]"
+	dev-qt/qtopengl:5"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=3.1
