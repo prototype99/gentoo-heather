@@ -86,7 +86,7 @@ src_prepare() {
 
 src_compile() {
 	OUT=out/$(usex debug D R)
-	./script/build.py --configuration $(usex debug Debug Release) || die "Compilation failed"
+	./script/build.py --configuration $(usex debug D R) || die "Compilation failed"
 	echo "v$PV" > "${OUT}/version"
 	cp LICENSE "$OUT"
 }

@@ -74,8 +74,6 @@ src_compile() {
 }
 
 src_install() {
-	./script/grunt install --install-dir=/opt/atom || die "grunt install failed"
-
 	into /usr
 	insinto /usr/share/applications
 	insinto /usr/share/${PN}/resources
