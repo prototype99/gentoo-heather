@@ -98,7 +98,8 @@ src_install() {
 
 	cd "${OUT}"
 
-	doexe electron libnode.so libffmpegsumo.so
+	doexe libnode.so libffmpegsumo.so
+	electron electron atom
 
 	doins -r resources
 	doins -r locales
