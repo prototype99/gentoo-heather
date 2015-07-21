@@ -6,26 +6,26 @@ EAPI=5
 inherit git-2 cmake-utils eutils
 
 DESCRIPTION="The Medical Imaging Interaction Toolkit."
-EGIT_REPO_URI="git://github.com/MITK/MITK.git"
+EGIT_REPO_URI="git://github.com/samsmu/MITK.git"
 HOMEPAGE="http://www.mitk.org/wiki"
 
 LICENSE="BSD"
-SLOT="1"
+SLOT="0"
 KEYWORDS=""
 IUSE="+boost"
 
 DEPEND="boost? ( dev-libs/boost )
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qtwebkit:5
-	dev-qt/qttest:5
-	dev-qt/designer:5
-	dev-qt/linguist:5
-	dev-qt/qtsql:5
-	dev-qt/qtsvg:5
-	dev-qt/qthelp:5
-	dev-qt/qtxmlpatterns:5
-	dev-qt/qtopengl:5"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
+	dev-qt/qttest:4
+	dev-qt/designer:4
+	dev-qt/linguist:4
+	dev-qt/qtsql:4
+	dev-qt/qtsvg:4
+	dev-qt/qthelp:4
+	dev-qt/qtxmlpatterns:4
+	dev-qt/qtopengl:4"
 RDEPEND="${DEPEND}"
 
 CMAKE_MIN_VERSION=3.1
