@@ -9,8 +9,8 @@ EAPI=5
 CABAL_FEATURES="lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="Despair"
-HOMEPAGE="http://hackage.haskell.org/package/despair"
+DESCRIPTION="everything breaking the Fairbairn threshold"
+HOMEPAGE="http://hackage.haskell.org/package/eternal"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -18,7 +18,9 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-haskell/random:=[profile?]
+RDEPEND="dev-haskell/base-unicode-symbols:=[profile?]
+	dev-haskell/transformers:=[profile?]
+	dev-haskell/utf8-string:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
 "
 DEPEND="${RDEPEND}
