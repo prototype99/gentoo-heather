@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header:  $
 
-EAPI="5"
+EAPI=5
 
 inherit base autotools eutils git-2
 
@@ -12,13 +12,12 @@ EGIT_REPO_URI="git://github.com/fish-shell/fish-shell.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
 DEPEND="sys-libs/ncurses
 	sys-devel/bc
 	sys-devel/gettext
-	www-client/htmlview
 	X? ( x11-misc/xsel )"
 RDEPEND="${DEPEND}"
 
@@ -31,8 +30,7 @@ src_configure() {
 	# Set things up for fish to be a default shell.
 	# It has to be in /bin in case /usr is unavailable.
 	# Also, all of its utilities have to be in /bin.
-	econf \
-		docdir="${EPREFIX}"/usr/share/doc/${PF} \
+	econf docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--without-xsel \
 		--bindir="${EPREFIX}"/bin
 }
