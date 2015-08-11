@@ -20,9 +20,8 @@ IUSE="winbind"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND=""
+DEPEND="app-arch/cabextract"
 RDEPEND="app-emulation/wine
-	app-arch/cabextract
 	app-arch/p7zip
 	app-arch/unzip
 	app-crypt/gnupg
