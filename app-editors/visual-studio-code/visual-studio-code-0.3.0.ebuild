@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	>=media-libs/libpng-1.2.46
+	>=media-libs/libpng-1.2.46:*
 	>=x11-libs/gtk+-2.24.8-r1:2
 	"
 RDEPEND="${DEPEND}"
@@ -40,9 +40,9 @@ src_install(){
 	doins -r *
 	dosym "/opt/${PN}/Code" "/usr/bin/visual-studio-code"
 	insinto "/usr/share/applications"
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}/${PN}.desktop"
 	insinto "/usr/share/pixmaps"
-	doins ${FILESDIR}/${PN}.png
+	doins "${FILESDIR}/${PN}.png"
 	fperms +x "/opt/${PN}/Code"
 	fperms +x "/opt/${PN}/libchromiumcontent.so"
 	fperms +x "/opt/${PN}/libffmpegsumo.so"
