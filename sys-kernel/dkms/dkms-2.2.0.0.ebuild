@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header:  $
 
-EAPI="5"
+EAPI=5
 
-inherit eutils bash-completion
+inherit eutils bash-completion-r1
 
 DESCRIPTION="Dynamic Kernel Module Support"
 SRC_URI="http://linux.dell.com/dkms/permalink/${P}.tar.gz"
