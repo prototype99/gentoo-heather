@@ -2,8 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>heather@cynede.net</email>
+		<email>cynede@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name='boost'>use system boost</flag>
+	</use>  
 	<longdescription>
 		The Medical Imaging Interaction Toolkit.
 	</longdescription>
