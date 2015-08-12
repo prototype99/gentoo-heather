@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=5
 
 inherit git-2 autotools eutils toolchain-funcs multilib
 
@@ -16,7 +16,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND=">=dev-libs/librep-9999
-	>=x11-libs/gtk+-2.10.0
+	>=x11-libs/gtk+-2.10.0:2
 	!x11-libs/rep-gtk
 	!x11-libs/rep-gtk-svn"
 
