@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
+EAPI=5
 EGIT_REPO_URI="https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/uemacs"
 
 inherit git-2 toolchain-funcs

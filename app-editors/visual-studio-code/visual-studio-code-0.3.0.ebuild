@@ -12,13 +12,12 @@ SRC_URI="
 	amd64? ( https://az764295.vo.msecnd.net/public/${PV}/VSCode-linux-x64.zip )
 	"
 
-LICENSE="Microsoft"
+LICENSE="EULA"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="
-	>=media-libs/libpng-1.2.46:*
+DEPEND=">=media-libs/libpng-1.2.46:*
 	>=x11-libs/gtk+-2.24.8-r1:2
 	"
 RDEPEND="${DEPEND}"
@@ -41,8 +40,9 @@ src_install(){
 	dosym "/opt/${PN}/Code" "/usr/bin/visual-studio-code"
 	insinto "/usr/share/applications"
 	doins "${FILESDIR}/${PN}.desktop"
-	insinto "/usr/share/pixmaps"
-	doins "${FILESDIR}/${PN}.png"
+	#TODO wget it
+	#insinto "/usr/share/pixmaps"
+	#doins "${FILESDIR}/${PN}.png"
 	fperms +x "/opt/${PN}/Code"
 	fperms +x "/opt/${PN}/libchromiumcontent.so"
 	fperms +x "/opt/${PN}/libffmpegsumo.so"
