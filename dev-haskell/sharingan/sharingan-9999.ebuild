@@ -12,7 +12,7 @@ inherit haskell-cabal git-2
 MY_PN="Sharingan"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION=""
+DESCRIPTION="Repositories synchronization util"
 HOMEPAGE="http://hackage.haskell.org/package/Sharingan"
 SRC_URI=""
 
