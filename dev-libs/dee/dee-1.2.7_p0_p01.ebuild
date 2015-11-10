@@ -19,7 +19,7 @@ UURL="mirror://ubuntu/pool/main/d/${PN}"
 URELEASE="saucy"
 UVER_PREFIX="+13.10.20130924.1"
 
-DESCRIPTION="Provide objects allowing to create Model-View-Controller type programs across DBus"
+DESCRIPTION="Model-View-Controller objects"
 HOMEPAGE="https://launchpad.net/dee/"
 SRC_URI="${UURL}/${MY_P}${UVER_PREFIX}.orig.tar.gz"
 
