@@ -17,7 +17,8 @@ HOMEPAGE="http://hackage.haskell.org/package/GithubNotify"
 EGIT_REPO_URI="git://github.com/Heather/GithubNotify.git"
 EGIT_MASTER="lens"
 
-LICENSE=""	# FIXME: EULA-style licence. Please pick it manually.
+#TODO: not sure about license, tbh
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -26,7 +27,7 @@ RDEPEND="dev-haskell/aeson:=
 	dev-haskell/http-conduit:=
 	dev-haskell/http-types:=
 	dev-haskell/lens:=
-	dev-haskell/libnotify
+	>=dev-haskell/libnotify-0.1.1.0:=
 	dev-haskell/mtl:=
 	dev-haskell/resourcet:=
 	dev-haskell/text:=
@@ -36,4 +37,3 @@ RDEPEND="dev-haskell/aeson:=
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.22.2.0
 "
-
