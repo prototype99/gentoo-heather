@@ -14,7 +14,7 @@ SLOT="1"
 KEYWORDS=""
 IUSE="+boost"
 
-DEPEND="boost? ( dev-libs/boost )
+DEPEND="boost? ( >=dev-libs/boost-1.58 )
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwebkit:5
