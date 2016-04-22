@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
+EAPI=5
+
 inherit eutils
 DESCRIPTION="Free calls, text and picture sharing with anyone, anywhere!"
 HOMEPAGE="http://www.viber.com"
@@ -13,9 +15,9 @@ IUSE=""
 RESTRICT="strip"
 S="${WORKDIR}"
 
-src_unpack() {
-	default_src_unpack
-	unpack ./data.tar.gz
+src_prepare() {
+	unpack ./control.tar.gz
+	unpack ./data.tar.xz
 	epatch "${FILESDIR}/viber-9999-desktop.patch"
 }
 
