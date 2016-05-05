@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -18,6 +18,7 @@ DEPEND="boost? ( >=dev-libs/boost-1.58 )
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwebkit:5
+	dev-qt/qtwebengine:5
 	dev-qt/qttest:5
 	dev-qt/designer:5
 	dev-qt/linguist:5
