@@ -18,7 +18,7 @@ DEPEND="boost? ( >=dev-libs/boost-1.58 )
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwebkit:5
-	dev-qt/qtwebengine:5
+	dev-qt/qtwebengine:5[widgets]
 	dev-qt/qttest:5
 	dev-qt/designer:5
 	dev-qt/linguist:5
