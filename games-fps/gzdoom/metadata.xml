@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>heather@live.ru</email>
+</maintainer>
+<longdescription>
+ZDoom is an enhanced port of the official DOOM source code
+</longdescription>
+</pkgmetadata>
+
