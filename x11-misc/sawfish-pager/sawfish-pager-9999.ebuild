@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit git-2 autotools
+inherit git-r3 autotools
 
 DESCRIPTION="The native pager of the Sawfish windowmanager"
 HOMEPAGE="http://sawfish.wikia.com"

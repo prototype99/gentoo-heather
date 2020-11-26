@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit git-2 cmake-utils eutils
+inherit git-r3 cmake-utils eutils
 
 DESCRIPTION="The Medical Imaging Interaction Toolkit."
 EGIT_REPO_URI="git://github.com/MITK/MITK.git"

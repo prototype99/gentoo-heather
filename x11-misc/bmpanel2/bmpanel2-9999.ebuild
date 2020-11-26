@@ -4,8 +4,7 @@
 
 EAPI="5"
 
-inherit cmake-utils
-inherit git-2
+inherit cmake-utils git-r3
 
 EGIT_REPO_URI="git://github.com/nsf/bmpanel2.git"
 
