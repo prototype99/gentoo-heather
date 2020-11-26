@@ -4,7 +4,7 @@
 
 EAPI="5"
 
-inherit font git-2
+inherit font git-r3
 
 DESCRIPTION="new open sourced font created to increase readability for readers with dyslexia"
 HOMEPAGE="http://dyslexicfonts.com/"
