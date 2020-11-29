@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="A very tiny Scheme implementation with decent speed and native hygienic macros."
 EGIT_REPO_URI="git://bitbucket.org/Heather/ocs.git"
