@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="AWESOME TODO LIST"
 EGIT_REPO_URI="git://github.com/Heather/sync.git"
